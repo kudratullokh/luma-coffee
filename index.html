@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LUMA — Coffee & Desserts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg: #050d17;
+      --text: #f4f1eb;
+      --muted: rgba(244,241,235,.56);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(72,104,137,.18),
+          transparent 34%
+        ),
+        linear-gradient(
+          180deg,
+          #050d17 0%,
+          #07111d 45%,
+          #050c15 100%
+        );
+
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+
+      background:
+        linear-gradient(
+          rgba(255,255,255,.012) 1px,
+          transparent 1px
+        );
+
+      background-size: 100% 4px;
+      opacity: .12;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       NAV
+    ========================= */
+
+    .nav {
+      position: fixed;
+      z-index: 1000;
+
+      top: 18px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: min(1180px, calc(100% - 36px));
+      height: 64px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 24px;
+
+      background: rgba(5,13,23,.62);
+
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 18px;
+
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+
+      box-shadow:
+        0 20px 70px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.05);
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 7px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      position: relative;
+
+      font-size: 12px;
+      letter-spacing: 1px;
+
+      color: rgba(255,255,255,.58);
+
+      transition: color .3s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -7px;
+
+      width: 0;
+      height: 1px;
+
+      background: rgba(255,255,255,.8);
+
+      transition: width .3s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100svh;
+
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 150px 20px 110px;
+
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 850px;
+      height: 850px;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(79,113,147,.18),
+          rgba(20,45,68,.06) 38%,
+          transparent 68%
+        );
+
+      filter: blur(10px);
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 62%,
+          #050d17 100%
+        );
+
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+    }
+
+    .eyebrow {
+      margin-bottom: 30px;
+
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,.43);
+    }
+
+    /*
+      IMPORTANT:
+      LUMA endi kesilmaydi.
+    */
+
+    .hero-title {
+      display: block;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(92px, 18vw, 245px);
+
+      font-weight: 400;
+
+      line-height: 1.05;
+
+      letter-spacing: -8px;
+
+      padding:
+        0.08em
+        0.03em
+        0.16em;
+
+      overflow: visible;
+
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #d8d8d3 45%,
+          #8e9499 100%
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+
+      text-shadow:
+        0 25px 80px rgba(0,0,0,.35);
+    }
+
+    .hero-subtitle {
+      max-width: 550px;
+
+      margin: 28px auto 0;
+
+      color: rgba(255,255,255,.54);
+
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 38px;
+
+      padding: 15px 29px;
+
+      border: 1px solid rgba(255,255,255,.16);
+
+      border-radius: 999px;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.09),
+          rgba(255,255,255,.035)
+        );
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 15px 40px rgba(0,0,0,.18);
+
+      font-size: 11px;
+      letter-spacing: 2px;
+
+      transition:
+        transform .35s ease,
+        background .35s ease,
+        border-color .35s ease;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-3px);
+
+      background:
+        rgba(255,255,255,.11);
+
+      border-color:
+        rgba(255,255,255,.25);
+    }
+
+    .scroll-text {
+      position: absolute;
+
+      bottom: 30px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      font-size: 9px;
+      letter-spacing: 5px;
+
+      color: rgba(255,255,255,.25);
+
+      z-index: 3;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      width: min(1280px, 100%);
+
+      margin: 0 auto;
+
+      padding: 125px 28px;
+    }
+
+    .section-label {
+      margin-bottom: 15px;
+
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,.32);
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(45px, 6vw, 78px);
+
+      font-weight: 400;
+
+      line-height: 1;
+    }
+
+    .section-description {
+      max-width: 620px;
+
+      margin-top: 23px;
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+      color: var(--muted);
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    .menu {
+      opacity: 0;
+
+      transform:
+        translateY(50px)
+        scale(.985);
+
+      filter: blur(8px);
+
+      transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        filter 1s ease;
+    }
+
+    .menu.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0)
+        scale(1);
+
+      filter: blur(0);
+    }
+
+    .menu-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 20px;
+
+      margin-top: 64px;
+    }
+
+    .card {
+      position: relative;
+
+      height: 585px;
+
+      overflow: hidden;
+
+      border-radius: 26px;
+
+      border: 1px solid rgba(255,255,255,.10);
+
+      background:
+        linear-gradient(
+          145deg,
+          #0b1724,
+          #06101b
+        );
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,.22),
+        inset 0 1px 0 rgba(255,255,255,.04);
+
+      isolation: isolate;
+
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      transition:
+        opacity .9s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-video {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      z-index: -3;
+
+      transition:
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        filter .8s ease;
+    }
+
+    .card:hover .card-video {
+      transform: scale(1.045);
+      filter: brightness(1.04);
+    }
+
+    .card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.06) 0%,
+          rgba(0,0,0,.03) 35%,
+          rgba(0,0,0,.32) 65%,
+          rgba(0,0,0,.90) 100%
+        );
+
+      z-index: -2;
+    }
+
+    .card::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      border-radius: inherit;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,.07),
+          transparent 28%
+        );
+
+      pointer-events: none;
+    }
+
+    .tiramisu-video {
+      object-fit: contain !important;
+
+      background:
+        radial-gradient(
+          circle,
+          #182c3d,
+          #07111d 72%
+        );
+    }
+
+    .watermark {
+      position: absolute;
+
+      top: 22px;
+      right: 24px;
+
+      font-size: 10px;
+
+      letter-spacing: 5px;
+
+      color: rgba(255,255,255,.24);
+    }
+
+    .card-content {
+      position: absolute;
+
+      left: 27px;
+      right: 27px;
+      bottom: 27px;
+
+      z-index: 3;
+    }
+
+    .card-number {
+      margin-bottom: 9px;
+
+      font-size: 9px;
+
+      letter-spacing: 4px;
+
+      color: rgba(255,255,255,.42);
+    }
+
+    .card-title {
+      font-family: "Playfair Display", serif;
+
+      font-size: 32px;
+
+      font-weight: 400;
+
+      line-height: 1.05;
+    }
+
+    .card-subtitle {
+      margin-top: 9px;
+
+      font-size: 12px;
+
+      color: rgba(255,255,255,.54);
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+      opacity: 0;
+
+      transform: translateY(50px);
+
+      filter: blur(8px);
+
+      transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        filter 1s ease;
+    }
+
+    .about-section.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+
+      filter: blur(0);
+    }
+
+    .about {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 85px;
+
+      align-items: center;
+    }
+
+    .about-title {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(48px, 6vw, 80px);
+
+      font-weight: 400;
+
+      line-height: .98;
+    }
+
+    .about-text {
+      margin-top: 27px;
+
+      max-width: 600px;
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+      color: var(--muted);
+    }
+
+    .about-quote {
+      margin-top: 32px;
+
+      padding-left: 22px;
+
+      border-left:
+        1px solid rgba(255,255,255,.25);
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 22px;
+
+      line-height: 1.55;
+
+      color: rgba(255,255,255,.76);
+    }
+
+    .about-side {
+      min-height: 500px;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+
+      border-radius: 30px;
+
+      border: 1px solid rgba(255,255,255,.08);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(71,108,140,.20),
+          transparent 58%
+        ),
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.035),
+          rgba(255,255,255,.01)
+        );
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.04),
+        0 40px 100px rgba(0,0,0,.20);
+    }
+
+    .about-side::before {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(255,255,255,.07);
+
+      box-shadow:
+        0 0 100px rgba(88,128,160,.12);
+    }
+
+    .about-logo {
+      position: relative;
+
+      z-index: 2;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(75px, 10vw, 135px);
+
+      letter-spacing: -6px;
+
+      color: rgba(255,255,255,.055);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-section {
+      opacity: 0;
+
+      transform: translateY(50px);
+
+      filter: blur(8px);
+
+      transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.2,.7,.2,1),
+        filter 1s ease;
+    }
+
+    .contact-section.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+
+      filter: blur(0);
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-title {
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(60px, 9vw, 110px);
+
+      font-weight: 400;
+
+      line-height: 1;
+    }
+
+    .contact-subtitle {
+      margin-top: 20px;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      color: var(--muted);
+    }
+
+    .contact-buttons {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 45px;
+    }
+
+    .contact-button {
+      min-width: 160px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 11px;
+
+      padding: 15px 23px;
+
+      border-radius: 999px;
+
+      border: 1px solid rgba(255,255,255,.11);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.075),
+          rgba(255,255,255,.025)
+        );
+
+      color: rgba(255,255,255,.72);
+
+      font-size: 12px;
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        0 15px 40px rgba(0,0,0,.15);
+
+      transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-3px);
+
+      color: white;
+
+      background:
+        rgba(255,255,255,.10);
+
+      border-color:
+        rgba(255,255,255,.20);
+    }
+
+    .contact-icon {
+      width: 18px;
+      height: 18px;
+
+      display: block;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.7;
+
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .telegram-icon {
+      fill: currentColor;
+      stroke: none;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 35px 20px 48px;
+
+      text-align: center;
+
+      font-size: 9px;
+
+      letter-spacing: 3px;
+
+      color: rgba(255,255,255,.23);
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .nav {
+        top: 12px;
+
+        width: calc(100% - 24px);
+
+        height: 60px;
+
+        padding: 0 18px;
+      }
+
+      .nav-links {
+        gap: 17px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+      }
+
+      .hero {
+        padding:
+          145px
+          18px
+          100px;
+      }
+
+      .hero-title {
+        font-size: 21vw;
+
+        letter-spacing: -5px;
+
+        padding:
+          .08em
+          .03em
+          .18em;
+      }
+
+      .menu-grid {
+        grid-template-columns:
+          repeat(2, minmax(0,1fr));
+      }
+
+      .card {
+        height: 560px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+
+      .about-side {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav {
+        top: 10px;
+
+        width: calc(100% - 18px);
+
+        height: 58px;
+
+        padding: 0 15px;
+
+        border-radius: 16px;
+      }
+
+      .logo {
+        font-size: 16px;
+
+        letter-spacing: 5px;
+      }
+
+      .nav-links {
+        gap: 11px;
+      }
+
+      .nav-links a {
+        font-size: 9px;
+      }
+
+      .hero {
+        padding:
+          135px
+          18px
+          90px;
+      }
+
+      .hero-title {
+        font-size: 25vw;
+
+        letter-spacing: -4px;
+
+        line-height: 1.08;
+
+        padding:
+          .08em
+          .04em
+          .20em;
+      }
+
+      .hero-subtitle {
+        font-size: 14px;
+
+        max-width: 340px;
+      }
+
+      section {
+        padding:
+          95px
+          17px;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        margin-top: 48px;
+      }
+
+      .card {
+        height: 680px;
+
+        border-radius: 22px;
+      }
+
+      .card-title {
+        font-size: 31px;
+      }
+
+      .card-content {
+        left: 23px;
+        right: 23px;
+        bottom: 23px;
+      }
+
+      .tiramisu-video {
+        object-fit: contain !important;
+      }
+
+      .about-side {
+        min-height: 310px;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        padding: 0 12px;
+      }
+
+      .contact-button {
+        width: 100%;
+
+        min-width: 0;
+      }
+
+      .contact-title {
+        font-size: 65px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- NAV -->
+
+  <nav class="nav">
+
+    <a href="#home" class="logo">
+      LUMA
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#menu">
+        Menu
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Coffee • Desserts • Tashkent
+      </div>
+
+      <h1 class="hero-title">
+        LUMA
+      </h1>
+
+      <p class="hero-subtitle">
+        Coffee, desserts and little moments worth slowing down for.
+      </p>
+
+      <a href="#menu" class="hero-button">
+        EXPLORE MENU
+      </a>
+
+    </div>
+
+    <div class="scroll-text">
+      SCROLL TO DISCOVER
+    </div>
+
+  </header>
+
+
+  <!-- MENU -->
+
+  <section class="menu" id="menu">
+
+    <div class="section-label">
+      LUMA MENU
+    </div>
+
+    <h2 class="section-title">
+      Taste the moment.
+    </h2>
+
+    <p class="section-description">
+      Good coffee, beautiful desserts, and a place to enjoy them slowly.
+    </p>
+
+
+    <div class="menu-grid">
+
+
+      <!-- AMERICANO -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/americano.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            01
+          </div>
+
+          <h3 class="card-title">
+            Americano
+          </h3>
+
+          <p class="card-subtitle">
+            Bold coffee, clean finish.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- ESPRESSO -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/espresso.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            02
+          </div>
+
+          <h3 class="card-title">
+            Espresso
+          </h3>
+
+          <p class="card-subtitle">
+            Small, rich and intense.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CHEESECAKE -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/cheesecake.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            03
+          </div>
+
+          <h3 class="card-title">
+            New York Cheesecake
+          </h3>
+
+          <p class="card-subtitle">
+            Creamy, smooth and indulgent.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- TIRAMISU -->
+
+      <article class="card">
+
+        <video
+          class="card-video tiramisu-video"
+          src="videos/aaaaaa.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            04
+          </div>
+
+          <h3 class="card-title">
+            Tiramisu
+          </h3>
+
+          <p class="card-subtitle">
+            Soft layers, coffee and cocoa.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CINNAMON -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/cinnamon.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            05
+          </div>
+
+          <h3 class="card-title">
+            Cinnamon Roll
+          </h3>
+
+          <p class="card-subtitle">
+            Warm, soft and comforting.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CARAMEL -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/caramel.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            06
+          </div>
+
+          <h3 class="card-title">
+            Caramel Macchiato
+          </h3>
+
+          <p class="card-subtitle">
+            Espresso, milk and caramel.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CAPPUCCINO -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/1111111.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            07
+          </div>
+
+          <h3 class="card-title">
+            Cappuccino
+          </h3>
+
+          <p class="card-subtitle">
+            Espresso with silky milk foam.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- ICED LATTE -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/icedlatte.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            08
+          </div>
+
+          <h3 class="card-title">
+            Iced Latte
+          </h3>
+
+          <p class="card-subtitle">
+            Cold, smooth and refreshing.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- CROISSANT -->
+
+      <article class="card">
+
+        <video
+          class="card-video"
+          src="videos/kurasan.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto">
+        </video>
+
+        <div class="watermark">
+          LUMA
+        </div>
+
+        <div class="card-content">
+
+          <div class="card-number">
+            09
+          </div>
+
+          <h3 class="card-title">
+            Croissant
+          </h3>
+
+          <p class="card-subtitle">
+            Golden, buttery and fresh.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about-section" id="about">
+
+    <div class="about">
+
+      <div>
+
+        <div class="section-label">
+          THE LUMA EXPERIENCE
+        </div>
+
+        <h2 class="about-title">
+          A little pause in your day.
+        </h2>
+
+        <p class="about-text">
+          Sometimes you just need a good coffee,
+          something sweet, and a little time for yourself.
+        </p>
+
+        <p class="about-text">
+          At LUMA, we keep things simple:
+          carefully made coffee, fresh desserts,
+          and an atmosphere where you can slow down
+          and enjoy the moment.
+        </p>
+
+        <p class="about-text">
+          Come by in the morning for your first coffee,
+          meet someone in the afternoon,
+          or stay a little longer in the evening.
+        </p>
+
+        <div class="about-quote">
+          “Good coffee tastes better when you don't have to rush.”
+        </div>
+
+      </div>
+
+
+      <div class="about-side">
+
+        <div class="about-logo">
+          LUMA
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact-section" id="contact">
+
+    <div class="contact">
+
+      <div class="section-label">
+        VISIT LUMA
+      </div>
+
+      <h2 class="contact-title">
+        See you soon.
+      </h2>
+
+      <p class="contact-subtitle">
+        Come for the coffee. Stay for the atmosphere.
+      </p>
+
+
+      <div class="contact-buttons">
+
+
+        <!-- GOOGLE MAPS -->
+
+        <a
+          class="contact-button"
+          href="https://www.google.com/maps/search/?api=1&query=Chinobod+10%2C+Tashkent"
+          target="_blank"
+          rel="noopener">
+
+          <svg
+            class="contact-icon"
+            viewBox="0 0 24 24">
+
+            <path
+              d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z">
+            </path>
+
+            <circle
+              cx="12"
+              cy="10"
+              r="2.5">
+            </circle>
+
+          </svg>
+
+          <span>
+            Google Maps
+          </span>
+
+        </a>
+
+
+        <!-- CALL -->
+
+        <a
+          class="contact-button"
+          href="tel:+998943330001">
+
+          <svg
+            class="contact-icon"
+            viewBox="0 0 24 24">
+
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2
+              19.79 19.79 0 0 1-8.63-3.07
+              19.5 19.5 0 0 1-6-6
+              A19.79 19.79 0 0 1 2.12 4.18
+              2 2 0 0 1 4.11 2h3
+              a2 2 0 0 1 2 1.72
+              12.84 12.84 0 0 0 .7 2.81
+              2 2 0 0 1-.45 2.11L8.09 9.91
+              a16 16 0 0 0 6 6l1.27-1.27
+              a2 2 0 0 1 2.11-.45
+              12.84 12.84 0 0 0 2.81.7
+              A2 2 0 0 1 22 16.92Z">
+            </path>
+
+          </svg>
+
+          <span>
+            Call
+          </span>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="contact-button"
+          href="https://www.instagram.com/01_sultonow/"
+          target="_blank"
+          rel="noopener">
+
+          <svg
+            class="contact-icon"
+            viewBox="0 0 24 24">
+
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5">
+            </rect>
+
+            <circle
+              cx="12"
+              cy="12"
+              r="4">
+            </circle>
+
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1">
+            </circle>
+
+          </svg>
+
+          <span>
+            Instagram
+          </span>
+
+        </a>
+
+
+        <!-- TELEGRAM -->
+
+        <a
+          class="contact-button"
+          href="https://t.me/sultonow_01"
+          target="_blank"
+          rel="noopener">
+
+          <svg
+            class="contact-icon telegram-icon"
+            viewBox="0 0 24 24">
+
+            <path
+              d="M21.6 3.2 2.9 10.4c-1.28.5-1.27 1.2-.23 1.5l4.8 1.5 1.85 5.62c.22.62.11.87.75.87.49 0 .7-.23.96-.5l2.33-2.26 4.84 3.58c.89.49 1.53.24 1.75-.83l3.17-15.03c.32-1.3-.5-1.89-1.51-1.65ZM8.2 13.07l10.86-6.86c.54-.33 1.04-.15.63.21l-8.82 7.96-.34 3.65-1.47-4.96-1.86-.58Z">
+            </path>
+
+          </svg>
+
+          <span>
+            Telegram
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    © 2026 LUMA / TASHKENT
+  </footer>
+
+
+  <script>
+
+    /* SECTION REVEAL */
+
+    const sections =
+      document.querySelectorAll(
+        ".menu, .about-section, .contact-section"
+      );
+
+    const sectionObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.08
+        }
+      );
+
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+
+
+    /* CARD REVEAL */
+
+    const cards =
+      document.querySelectorAll(".card");
+
+    const cardObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              const card =
+                entry.target;
+
+              const index =
+                [...cards].indexOf(card);
+
+              setTimeout(
+                () => {
+                  card.classList.add("show");
+                },
+                index * 100
+              );
+
+              cardObserver.unobserve(card);
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.08
+        }
+      );
+
+    cards.forEach(card => {
+      cardObserver.observe(card);
+    });
+
+
+    /* VIDEO AUTOPLAY */
+
+    const videos =
+      document.querySelectorAll("video");
+
+    videos.forEach(video => {
+
+      video.muted = true;
+      video.playsInline = true;
+
+      const playVideo = () => {
+
+        const promise =
+          video.play();
+
+        if (promise) {
+          promise.catch(() => {});
+        }
+
+      };
+
+      playVideo();
+
+      video.addEventListener(
+        "loadeddata",
+        playVideo
+      );
+
+      video.addEventListener(
+        "canplay",
+        playVideo
+      );
+
+    });
+
+
+    /* VIDEO PLAY / PAUSE */
+
+    const videoObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            const video =
+              entry.target;
+
+            if (entry.isIntersecting) {
+
+              video.play()
+                .catch(() => {});
+
+            } else {
+
+              video.pause();
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.15
+        }
+      );
+
+    videos.forEach(video => {
+      videoObserver.observe(video);
+    });
+
+  </script>
+
+</body>
+</html>
