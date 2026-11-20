@@ -1,0 +1,3199 @@
+{
+ "updated": "2026-11-01",
+ "source": "Siberian Wellness Ўзбекистон прайс-листи (мижоз нархи)",
+ "categories": {
+  "health": "Саломатлик",
+  "beauty": "Гўзаллик",
+  "parfum": "Парфюм",
+  "sport": "Спорт",
+  "other": "Бошқа"
+ },
+ "products": [
+  {
+   "id": "500572",
+   "name": "3D Bone Vegan Cube",
+   "price": 504000,
+   "points": 63,
+   "category": "health",
+   "series": "3D Cube",
+   "photo": ""
+  },
+  {
+   "id": "500570",
+   "name": "3D Flex Cube",
+   "price": 780000,
+   "points": 92,
+   "category": "health",
+   "series": "3D Cube",
+   "photo": ""
+  },
+  {
+   "id": "500581",
+   "name": "Фиточай из диких трав № 1 (Очищение и дренаж)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500582",
+   "name": "Фиточай из диких трав № 2 (Женская гармония)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500583",
+   "name": "Фиточай из диких трав № 3 (Природный антистресс)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500584",
+   "name": "Фиточай из диких трав № 4 (Легкое дыхание)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500585",
+   "name": "Фиточай из диких трав № 5 (Комфортное пищеварение)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500586",
+   "name": "Фиточай из диких трав № 6 (Защита печени)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500587",
+   "name": "Фиточай из диких трав № 7 (Легкость движений)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500588",
+   "name": "Фиточай из диких трав № 8 (Сердечный комфорт)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500589",
+   "name": "Фиточай из диких трав № 9 (Углеводный контроль)",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "500327",
+   "name": "Универсальный иммунобустер",
+   "price": 169000,
+   "points": 21,
+   "category": "health",
+   "series": "CoreNRG",
+   "photo": ""
+  },
+  {
+   "id": "500172",
+   "name": "Beauty Box / Красота и сияние",
+   "price": 214000,
+   "points": 25,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "500952",
+   "name": "GLUCO Box / Контроль уровня сахара",
+   "price": 502000,
+   "points": 63,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "500175",
+   "name": "IQ Box / Интеллект",
+   "price": 191000,
+   "points": 23,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "500526",
+   "name": "Immuno Box / Иммуно бокс",
+   "price": 294000,
+   "points": 35.5,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "500467",
+   "name": "Lite Step Box / Легкая походка",
+   "price": 346000,
+   "points": 42,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "500443",
+   "name": "Pulse Box / Пульс бокс",
+   "price": 295000,
+   "points": 35,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "500931",
+   "name": "RELAX Box / Защита от стресса",
+   "price": 330000,
+   "points": 41.5,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "500361",
+   "name": "Vision Box / Острое зрение",
+   "price": 417000,
+   "points": 50,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "501237",
+   "name": "Глицин",
+   "price": 92000,
+   "points": 11.5,
+   "category": "health",
+   "series": "Essential Amino",
+   "photo": ""
+  },
+  {
+   "id": "500653",
+   "name": "Арония и лютеин",
+   "price": 96000,
+   "points": 11.5,
+   "category": "health",
+   "series": "Essential Botanics",
+   "photo": ""
+  },
+  {
+   "id": "501141",
+   "name": "Биодоступный куркумин",
+   "price": 130000,
+   "points": 15.6,
+   "category": "health",
+   "series": "Essential Botanics",
+   "photo": ""
+  },
+  {
+   "id": "500657",
+   "name": "Валериана и мелисса",
+   "price": 113000,
+   "points": 13.5,
+   "category": "health",
+   "series": "Essential Botanics",
+   "photo": ""
+  },
+  {
+   "id": "500654",
+   "name": "Гинкго билоба и байкальский шлемник",
+   "price": 85000,
+   "points": 10.6,
+   "category": "health",
+   "series": "Essential Botanics",
+   "photo": ""
+  },
+  {
+   "id": "500655",
+   "name": "Йохимбе и сибирский женьшень",
+   "price": 85000,
+   "points": 10.2,
+   "category": "health",
+   "series": "Essential Botanics",
+   "photo": ""
+  },
+  {
+   "id": "501306",
+   "name": "Перуанская мака",
+   "price": 226000,
+   "points": 27,
+   "category": "health",
+   "series": "Essential Botanics",
+   "photo": ""
+  },
+  {
+   "id": "500049",
+   "name": "Бораго и амарант",
+   "price": 209000,
+   "points": 24,
+   "category": "health",
+   "series": "Essential Fatty Acids",
+   "photo": ""
+  },
+  {
+   "id": "5FP183",
+   "name": "Ликопин и Омега-3",
+   "price": 148000,
+   "points": 17.7,
+   "category": "health",
+   "series": "Essential Fatty Acids",
+   "photo": ""
+  },
+  {
+   "id": "500102",
+   "name": "Лютеин и Зеаксантин. Суперконцентрат",
+   "price": 137000,
+   "points": 16.5,
+   "category": "health",
+   "series": "Essential Fatty Acids",
+   "photo": ""
+  },
+  {
+   "id": "500060",
+   "name": "Натуральный бета-каротин и облепиха",
+   "price": 113000,
+   "points": 13.5,
+   "category": "health",
+   "series": "Essential Fatty Acids",
+   "photo": ""
+  },
+  {
+   "id": "500062",
+   "name": "Сибирский лен и омега-3",
+   "price": 113000,
+   "points": 13.5,
+   "category": "health",
+   "series": "Essential Fatty Acids",
+   "photo": ""
+  },
+  {
+   "id": "500954",
+   "name": "Органический германий",
+   "price": 209000,
+   "points": 26.5,
+   "category": "health",
+   "series": "Essential Minerals",
+   "photo": ""
+  },
+  {
+   "id": "500914",
+   "name": "Органический кальций",
+   "price": 120000,
+   "points": 15,
+   "category": "health",
+   "series": "Essential Minerals",
+   "photo": ""
+  },
+  {
+   "id": "500630",
+   "name": "Органический селен",
+   "price": 156000,
+   "points": 18,
+   "category": "health",
+   "series": "Essential Minerals",
+   "photo": ""
+  },
+  {
+   "id": "500663",
+   "name": "Эльбифид",
+   "price": 191000,
+   "points": 22,
+   "category": "health",
+   "series": "Essential Probiotics",
+   "photo": ""
+  },
+  {
+   "id": "500633",
+   "name": "Суставной фитосорбент Joint Comfort",
+   "price": 78000,
+   "points": 9.2,
+   "category": "health",
+   "series": "Essential Sorbents",
+   "photo": ""
+  },
+  {
+   "id": "500634",
+   "name": "Кишечный фитосорбент Intestinal Defense",
+   "price": 78000,
+   "points": 9.2,
+   "category": "health",
+   "series": "Essential Sorbents",
+   "photo": ""
+  },
+  {
+   "id": "500632",
+   "name": "Очищающий фитосорбент Pure Life",
+   "price": 96000,
+   "points": 11.2,
+   "category": "health",
+   "series": "Essential Sorbents",
+   "photo": ""
+  },
+  {
+   "id": "400237",
+   "name": "Природный инулиновый концентрат (ПИК)",
+   "price": 68000,
+   "points": 7.9,
+   "category": "health",
+   "series": "Essential Sorbents",
+   "photo": ""
+  },
+  {
+   "id": "501236",
+   "name": "Альфа-липоевая кислота",
+   "price": 85000,
+   "points": 10.6,
+   "category": "health",
+   "series": "Essential Vitamins",
+   "photo": ""
+  },
+  {
+   "id": "500625",
+   "name": "Бетаин и В-витамины",
+   "price": 85000,
+   "points": 10.6,
+   "category": "health",
+   "series": "Essential Vitamins",
+   "photo": ""
+  },
+  {
+   "id": "501234",
+   "name": "Витамин К2",
+   "price": 200000,
+   "points": 23.5,
+   "category": "health",
+   "series": "Essential Vitamins",
+   "photo": ""
+  },
+  {
+   "id": "501233",
+   "name": "Витамин С и рутин",
+   "price": 96000,
+   "points": 11.5,
+   "category": "health",
+   "series": "Essential Vitamins",
+   "photo": ""
+  },
+  {
+   "id": "501429",
+   "name": "Натуральный витамин E",
+   "price": 156000,
+   "points": 18,
+   "category": "health",
+   "series": "Essential Vitamins",
+   "photo": ""
+  },
+  {
+   "id": "500577",
+   "name": "Северная клюква и В-витамины",
+   "price": 156000,
+   "points": 18.4,
+   "category": "health",
+   "series": "Essential Vitamins",
+   "photo": ""
+  },
+  {
+   "id": "500967",
+   "name": "Сывороточный протеин Fitness Catalyst (ванильное мороженое)",
+   "price": 540000,
+   "points": 29,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "501092",
+   "name": "L-аргинин",
+   "price": 217000,
+   "points": 27,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "500276",
+   "name": "Глюкозамин и хондроитин",
+   "price": 330000,
+   "points": 41.5,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "500277",
+   "name": "Комплекс аминокислот BCAA",
+   "price": 269000,
+   "points": 32,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "501031",
+   "name": "Метилсульфонилметан",
+   "price": 143000,
+   "points": 17.8,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "500484",
+   "name": "Омега-3 Ультра",
+   "price": 435000,
+   "points": 53,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "501181",
+   "name": "Пептиды морского коллагена Fitness Catalyst (ваниль-черника)",
+   "price": 635000,
+   "points": 56,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "501152",
+   "name": "Пептиды морского коллагена Fitness Catalyst (оригинал)",
+   "price": 600000,
+   "points": 53,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "500964",
+   "name": "Сывороточный протеин Fitness Catalyst (черничный чизкейк)",
+   "price": 540000,
+   "points": 29,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "500968",
+   "name": "Сывороточный протеин Fitness Catalyst (шоколадное печенье)",
+   "price": 540000,
+   "points": 29,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "501217",
+   "name": "Таурин",
+   "price": 103000,
+   "points": 13.4,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "500874",
+   "name": "Хромлипаза",
+   "price": 137000,
+   "points": 17.6,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "501493",
+   "name": "Чистый рыбный коллаген (клубника-лайм) Fitness Catalyst",
+   "price": 635000,
+   "points": 56,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "501188",
+   "name": "Detox Pro.Active",
+   "price": 970000,
+   "points": 124,
+   "category": "health",
+   "series": "Siberian Super Natural Nutrition",
+   "photo": ""
+  },
+  {
+   "id": "501185",
+   "name": "Neurovision",
+   "price": 970000,
+   "points": 124,
+   "category": "health",
+   "series": "Siberian Super Natural Nutrition",
+   "photo": ""
+  },
+  {
+   "id": "501186",
+   "name": "Stress Re.Live",
+   "price": 1008000,
+   "points": 125,
+   "category": "health",
+   "series": "Siberian Super Natural Nutrition",
+   "photo": ""
+  },
+  {
+   "id": "501187",
+   "name": "BeautySense",
+   "price": 1008000,
+   "points": 125,
+   "category": "health",
+   "series": "Siberian Super Natural Nutrition",
+   "photo": ""
+  },
+  {
+   "id": "501184",
+   "name": "Natural Vitamins",
+   "price": 860000,
+   "points": 107,
+   "category": "health",
+   "series": "Siberian Super Natural Nutrition",
+   "photo": ""
+  },
+  {
+   "id": "501251",
+   "name": "Age Therapy Antioxidants",
+   "price": 346000,
+   "points": 42,
+   "category": "health",
+   "series": "Women's Health",
+   "photo": ""
+  },
+  {
+   "id": "501200",
+   "name": "D-манноза & Северная клюква",
+   "price": 311000,
+   "points": 38,
+   "category": "health",
+   "series": "Women's Health",
+   "photo": ""
+  },
+  {
+   "id": "501325",
+   "name": "Метилфолат",
+   "price": 311000,
+   "points": 38,
+   "category": "health",
+   "series": "Women's Health",
+   "photo": ""
+  },
+  {
+   "id": "501290",
+   "name": "Хелат железа",
+   "price": 207000,
+   "points": 26,
+   "category": "health",
+   "series": "Women's Health",
+   "photo": ""
+  },
+  {
+   "id": "500644",
+   "name": "Antistress-батончик (карамель и фундук)",
+   "price": 27000,
+   "points": 2.1,
+   "category": "sport",
+   "series": "Yoo GO",
+   "photo": ""
+  },
+  {
+   "id": "500713",
+   "name": "Напиток Weight Control (малина-гранат)",
+   "price": 172000,
+   "points": 18,
+   "category": "sport",
+   "series": "Yoo GO",
+   "photo": ""
+  },
+  {
+   "id": "500543",
+   "name": "Напиток Weight Control (яблоко-лимон)",
+   "price": 165000,
+   "points": 16.5,
+   "category": "sport",
+   "series": "Yoo GO",
+   "photo": ""
+  },
+  {
+   "id": "501143",
+   "name": "Dino Lactino, пектиновый сорбент",
+   "price": 172000,
+   "points": 20.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501182",
+   "name": "Dino Vision, жевательные таблетки с черникой",
+   "price": 160000,
+   "points": 18.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501394",
+   "name": "Immunotops, капсулы с витамином D3",
+   "price": 113000,
+   "points": 14,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501072",
+   "name": "Immunotops, фруктовые жевательные таблетки с витаминами A, C и D",
+   "price": 160000,
+   "points": 18.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501329",
+   "name": "Immunotops, хрустящие шарики с инулином (вишня)",
+   "price": 85000,
+   "points": 7,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501367",
+   "name": "OMEGAlodon (классик), комплекс омега-3 кислот",
+   "price": 155000,
+   "points": 18.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "500714",
+   "name": "OMEGAlodon (мультифрукт), комплекс омега-3 кислот",
+   "price": 155000,
+   "points": 18.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "500213",
+   "name": "Renaissance Triple Set",
+   "price": 478000,
+   "points": 63,
+   "category": "health",
+   "series": "Истоки чистоты",
+   "photo": ""
+  },
+  {
+   "id": "500048",
+   "name": "Витаминно-минеральный комплекс",
+   "price": 242000,
+   "points": 28,
+   "category": "health",
+   "series": "Ритмы здоровья",
+   "photo": ""
+  },
+  {
+   "id": "500071",
+   "name": "Хронобиологическая защита клеток мозга, Синхровитал II",
+   "price": 259000,
+   "points": 32.5,
+   "category": "health",
+   "series": "Синхровитал",
+   "photo": ""
+  },
+  {
+   "id": "500130",
+   "name": "Хронобиологическая защита печени, Синхровитал IV",
+   "price": 120000,
+   "points": 15,
+   "category": "health",
+   "series": "Синхровитал",
+   "photo": ""
+  },
+  {
+   "id": "500072",
+   "name": "Хронобиологическая защита сердца, Синхровитал III",
+   "price": 311000,
+   "points": 39,
+   "category": "health",
+   "series": "Синхровитал",
+   "photo": ""
+  },
+  {
+   "id": "500065",
+   "name": "Хронобиологическая защита суставов, Синхровитал VI",
+   "price": 172000,
+   "points": 21.5,
+   "category": "health",
+   "series": "Синхровитал",
+   "photo": ""
+  },
+  {
+   "id": "500116",
+   "name": "Антипаразитарная защита",
+   "price": 276000,
+   "points": 31,
+   "category": "health",
+   "series": "Тригельм",
+   "photo": ""
+  },
+  {
+   "id": "400264",
+   "name": "ЭПАМ 1000",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400265",
+   "name": "ЭПАМ 11",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400266",
+   "name": "ЭПАМ 24",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400267",
+   "name": "ЭПАМ 31",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400268",
+   "name": "ЭПАМ 4",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400270",
+   "name": "ЭПАМ 44",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400271",
+   "name": "ЭПАМ 7",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400273",
+   "name": "ЭПАМ 900",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "400274",
+   "name": "ЭПАМ 96",
+   "price": 52000,
+   "points": 5.5,
+   "category": "health",
+   "series": "ЭПАМ",
+   "photo": ""
+  },
+  {
+   "id": "501441",
+   "name": "Bones & Joints-батончик (кокос)",
+   "price": 34000,
+   "points": 2.7,
+   "category": "health",
+   "series": "Батончиклар ва ичимликлар",
+   "photo": ""
+  },
+  {
+   "id": "501452",
+   "name": "Immuno-батончик (вишня-банан)",
+   "price": 34000,
+   "points": 2.7,
+   "category": "health",
+   "series": "Батончиклар ва ичимликлар",
+   "photo": ""
+  },
+  {
+   "id": "501501",
+   "name": "Turbo Tea (Очищающий турбочай)",
+   "price": 56000,
+   "points": 6.4,
+   "category": "health",
+   "series": "Батончиклар ва ичимликлар",
+   "photo": ""
+  },
+  {
+   "id": "501434",
+   "name": "Напиток Beauty-микс (лесные ягоды) с коллагеном и гиалуроновой кислотой",
+   "price": 172000,
+   "points": 18,
+   "category": "health",
+   "series": "Батончиклар ва ичимликлар",
+   "photo": ""
+  },
+  {
+   "id": "501674",
+   "name": "Dino Mino, напиток с лактатом магния",
+   "price": 137000,
+   "points": 11.3,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501604",
+   "name": "Лецитин из подсолнечника Vitamama Family (сироп)",
+   "price": 172000,
+   "points": 20.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501830",
+   "name": "Набор «Чебурашка: геройское комбо!»",
+   "price": 350000,
+   "points": 40,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501776",
+   "name": "Омега-3 (апельсин)",
+   "price": 155000,
+   "points": 18.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501741",
+   "name": "Омега-3 ДГК",
+   "price": 304000,
+   "points": 35,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501680",
+   "name": "Растительный детокс Vitamama Family",
+   "price": 217000,
+   "points": 25.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501675",
+   "name": "Сорбент из цитрусового пектина Vitamama Family",
+   "price": 217000,
+   "points": 25.5,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501664",
+   "name": "Фитосироп для легкого дыхания Vitamama Family",
+   "price": 103000,
+   "points": 11.8,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501566",
+   "name": "Хрустящие шарики Immunotops «Шоколадное печенье» с витамином С",
+   "price": 85000,
+   "points": 7,
+   "category": "health",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "501654",
+   "name": "L-карнитин",
+   "price": 346000,
+   "points": 42,
+   "category": "sport",
+   "series": "SW Sport",
+   "photo": ""
+  },
+  {
+   "id": "501567",
+   "name": "Быстрорастворимый комплекс веганских BCAA (апельсин-манго)",
+   "price": 120000,
+   "points": 9.2,
+   "category": "sport",
+   "series": "SW Sport",
+   "photo": ""
+  },
+  {
+   "id": "501642",
+   "name": "Бьюти-комплекс «Трипептиды коллагена & Кофакторы»",
+   "price": 398000,
+   "points": 47,
+   "category": "sport",
+   "series": "SW Sport",
+   "photo": ""
+  },
+  {
+   "id": "501605",
+   "name": "Омега-3 XXL",
+   "price": 487000,
+   "points": 60,
+   "category": "sport",
+   "series": "SW Sport",
+   "photo": ""
+  },
+  {
+   "id": "501390",
+   "name": "Протеиновый коктейль WHEY PLUS 80 «Клубника», 480 г",
+   "price": 678000,
+   "points": 49,
+   "category": "sport",
+   "series": "SW Sport",
+   "photo": ""
+  },
+  {
+   "id": "501742",
+   "name": "L-теанин + ГАМК",
+   "price": 137000,
+   "points": 17.2,
+   "category": "health",
+   "series": "Essential Amino",
+   "photo": ""
+  },
+  {
+   "id": "501681",
+   "name": "MAMA Box Беременность",
+   "price": 395000,
+   "points": 50,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "501682",
+   "name": "MAMA Box Грудное вскармливание",
+   "price": 395000,
+   "points": 50,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "501637",
+   "name": "MEN'S BOX / Мужская сила",
+   "price": 468000,
+   "points": 59,
+   "category": "health",
+   "series": "Daily Box",
+   "photo": ""
+  },
+  {
+   "id": "501641",
+   "name": "N-ацетил-L-цистеин",
+   "price": 172000,
+   "points": 21,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501418",
+   "name": "S-ацетил-L-глутатион",
+   "price": 520000,
+   "points": 65,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501896",
+   "name": "Антиоксидантный комплекс НовоМин",
+   "price": 172000,
+   "points": 23,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501671",
+   "name": "Берберин & Кофакторы",
+   "price": 339000,
+   "points": 42,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501541",
+   "name": "Витамины с кальцием",
+   "price": 96000,
+   "points": 11.5,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501539",
+   "name": "Глюкозамин и хондроитин",
+   "price": 120000,
+   "points": 15,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501878",
+   "name": "Лактоферрин Ультра",
+   "price": 337000,
+   "points": 46,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501540",
+   "name": "Медвежьи ушки и брусника",
+   "price": 162000,
+   "points": 19.5,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501810",
+   "name": "Набор «Чебурашка: секреты настоящих героев!»",
+   "price": 311000,
+   "points": 24,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501616",
+   "name": "Новомин-L",
+   "price": 226000,
+   "points": 30,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501538",
+   "name": "Органический йод",
+   "price": 120000,
+   "points": 15,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501537",
+   "name": "Органический магний",
+   "price": 120000,
+   "points": 15,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501534",
+   "name": "Органический цинк",
+   "price": 148000,
+   "points": 17.7,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501535",
+   "name": "Органическое железо",
+   "price": 120000,
+   "points": 15,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501466",
+   "name": "Пробиотик Nutrition Comfort для комфортного пищеварения (3+)",
+   "price": 209000,
+   "points": 26.5,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501615",
+   "name": "Пробиотик Oral Health для баланса микрофлоры полости рта",
+   "price": 224000,
+   "points": 27.5,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501462",
+   "name": "Пробиотик Senior для поддержания иммунитета и защиты от вирусов",
+   "price": 243000,
+   "points": 30,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501464",
+   "name": "Пробиотик Women's Balance для баланса женской интимной микрофлоры",
+   "price": 191000,
+   "points": 24.5,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501802",
+   "name": "Растительный мелатонин",
+   "price": 90000,
+   "points": 11,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501571",
+   "name": "Розмариновая кислота",
+   "price": 172000,
+   "points": 21,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501542",
+   "name": "Система комплексного очищения организма на клеточном уровне Истоки чистоты",
+   "price": 304000,
+   "points": 35.5,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501907",
+   "name": "Функциональный коктейль Ketology / Кетолоджи (шоколад)",
+   "price": 609000,
+   "points": 34,
+   "category": "health",
+   "series": "Махсус комплекслар",
+   "photo": ""
+  },
+  {
+   "id": "501644",
+   "name": "Витамин D3 MAX",
+   "price": 137000,
+   "points": 16.5,
+   "category": "health",
+   "series": "Essentials",
+   "photo": ""
+  },
+  {
+   "id": "501638",
+   "name": "Ежовик гребенчатый и кордицепс для улучшения когнитивных функций",
+   "price": 252000,
+   "points": 30,
+   "category": "health",
+   "series": "Essentials",
+   "photo": ""
+  },
+  {
+   "id": "501640",
+   "name": "Комплекс древесных грибов для поддержки иммунитета и антиоксидантной защиты",
+   "price": 155000,
+   "points": 18.5,
+   "category": "health",
+   "series": "Essentials",
+   "photo": ""
+  },
+  {
+   "id": "501672",
+   "name": "Комплекс растительных горечей",
+   "price": 113000,
+   "points": 13.5,
+   "category": "health",
+   "series": "Essentials",
+   "photo": ""
+  },
+  {
+   "id": "501569",
+   "name": "Органический кремний",
+   "price": 261000,
+   "points": 31,
+   "category": "health",
+   "series": "Essentials",
+   "photo": ""
+  },
+  {
+   "id": "500864",
+   "name": "Ортилия и Зимолюбка",
+   "price": 252000,
+   "points": 30,
+   "category": "health",
+   "series": "Essentials",
+   "photo": ""
+  },
+  {
+   "id": "501431",
+   "name": "Пустырник и мята",
+   "price": 148000,
+   "points": 17,
+   "category": "health",
+   "series": "Essentials",
+   "photo": ""
+  },
+  {
+   "id": "501405",
+   "name": "Дикий ямс & Изофлавоны сои",
+   "price": 311000,
+   "points": 38,
+   "category": "health",
+   "series": "Women's Health",
+   "photo": ""
+  },
+  {
+   "id": "501407",
+   "name": "Мио-инозитол & D-хиро-инозитол",
+   "price": 328000,
+   "points": 41,
+   "category": "health",
+   "series": "Women's Health",
+   "photo": ""
+  },
+  {
+   "id": "501330",
+   "name": "Хронолонг",
+   "price": 311000,
+   "points": 38,
+   "category": "health",
+   "series": "Women's Health",
+   "photo": ""
+  },
+  {
+   "id": "501864",
+   "name": "Набор «Стройность и детокс»",
+   "price": 520000,
+   "points": 63,
+   "category": "health",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "501544",
+   "name": "Фермент «Лактаза» для усвоения лактозы и комфортного пищеварения",
+   "price": 214000,
+   "points": 25,
+   "category": "health",
+   "series": "Essential Enzymes",
+   "photo": ""
+  },
+  {
+   "id": "501698",
+   "name": "Чайханский чай. Зеленый с травами",
+   "price": 69000,
+   "points": 8,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "501699",
+   "name": "Чайханский чай. Черный с травами",
+   "price": 69000,
+   "points": 8,
+   "category": "health",
+   "series": "Baikal Tea Collection",
+   "photo": ""
+  },
+  {
+   "id": "417417",
+   "name": "Dark Vanilla & Cherry Blossom, парфюмерная вода",
+   "price": 398000,
+   "points": 51,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "423510",
+   "name": "Dark Vanilla & Cherry Blossom, парфюмерная вода, 20 мл",
+   "price": 235000,
+   "points": 28,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "417419",
+   "name": "Fresh Fig & Sparkling Tangerine, парфюмерная вода",
+   "price": 398000,
+   "points": 51,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "417418",
+   "name": "Golden Amber & Midnight Saffron, парфюмерная вода",
+   "price": 398000,
+   "points": 51,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "424937",
+   "name": "Golden Violet & Amber Absolu, парфюмерная вода",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "424149",
+   "name": "Orange Rose & Vanilla, парфюмерная вода, 20 мл",
+   "price": 252000,
+   "points": 31,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "424147",
+   "name": "Pink Rose & Sea Salt, парфюмерная вода, 20 мл",
+   "price": 252000,
+   "points": 31,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "424146",
+   "name": "Pink Rose & Sea Salt, парфюмерная вода, 50 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "424941",
+   "name": "Silver Wood & Oakmoss, парфюмерная вода",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "424145",
+   "name": "White Rose & Musk, парфюмерная вода, 20 мл",
+   "price": 252000,
+   "points": 31,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "424143",
+   "name": "White Rose & Musk, парфюмерная вода, 50 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis Olfactive Studio",
+   "photo": ""
+  },
+  {
+   "id": "422771",
+   "name": "Demi-Lune № 04, парфюмерная вода для мужчин",
+   "price": 572000,
+   "points": 69,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "425403",
+   "name": "Nuage, парфюмерная вода",
+   "price": 641000,
+   "points": 80,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "430414",
+   "name": "Nuage, парфюмерная вода, 20 мл",
+   "price": 346000,
+   "points": 43,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "423516",
+   "name": "Парфюмерная вода Arc-en-Ciel, 20 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "423514",
+   "name": "Arc-en-ciel Bloom, парфюмерная вода, 20 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "425267",
+   "name": "Demi-Lune Aqua, парфюмерная вода для мужчин",
+   "price": 572000,
+   "points": 69,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "425265",
+   "name": "Demi-Lune Ignis, парфюмерная вода для мужчин",
+   "price": 572000,
+   "points": 69,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "425263",
+   "name": "Demi-Lune Terra, парфюмерная вода для мужчин",
+   "price": 572000,
+   "points": 69,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "426148",
+   "name": "Demon du Ciel, парфюмерная вода, 20 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "424198",
+   "name": "FLUIDES Like God, парфюмерная вода, 20 мл",
+   "price": 252000,
+   "points": 34,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "425177",
+   "name": "Nuage Freesia, парфюмерная вода",
+   "price": 641000,
+   "points": 80,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "425181",
+   "name": "Nuage Osmanthus, парфюмерная вода",
+   "price": 641000,
+   "points": 80,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "423515",
+   "name": "Парфюмерная вода Arc-en-Ciel Ice Dance, 20 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Ciel",
+   "photo": ""
+  },
+  {
+   "id": "431802",
+   "name": "Crystal Pear (Хрустальная груша), парфюмерная вода, 20 мл",
+   "price": 269000,
+   "points": 33,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "430154",
+   "name": "Crystal Pear, парфюмерная вода",
+   "price": 505000,
+   "points": 62,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "431800",
+   "name": "Frozen Lily (Морозная лилия), парфюмерная вода, 20 мл",
+   "price": 269000,
+   "points": 33,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "430153",
+   "name": "Frozen Lily, парфюмерная вода",
+   "price": 505000,
+   "points": 62,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "431801",
+   "name": "Icy Vanilla (Ледяная ваниль), парфюмерная вода, 20 мл",
+   "price": 269000,
+   "points": 33,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "430152",
+   "name": "Icy Vanilla, парфюмерная вода",
+   "price": 505000,
+   "points": 62,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "427652",
+   "name": "Blue Matcha & Vetiver (Голубая матча и Ветивер), парфюмерная вода, 50 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "427653",
+   "name": "Masala tea & Tobacco (Чай масала и Табак), парфюмерная вода, 50 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "427651",
+   "name": "Neroli Tea & Bergamot (Чай нероли и Бергамот), парфюмерная вода, 50 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "427650",
+   "name": "Tea Blossom & Candy (Цветущий чай и леденцы), парфюмерная вода, 50 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "427649",
+   "name": "White Tea & Mimosa (Белый чай и Мимоза), парфюмерная вода, 50 мл",
+   "price": 415000,
+   "points": 52,
+   "category": "parfum",
+   "series": "Aromapolis",
+   "photo": ""
+  },
+  {
+   "id": "432665",
+   "name": "Neroli Tea & Bergamot (Нероли и бергамот), парфюмированный набор",
+   "price": 308000,
+   "points": 37,
+   "category": "parfum",
+   "series": "Парфюм тўпламлари",
+   "photo": ""
+  },
+  {
+   "id": "432664",
+   "name": "Tonka Beans & Tobacco (Бобы тонка и табак), парфюмированный набор",
+   "price": 308000,
+   "points": 37,
+   "category": "parfum",
+   "series": "Парфюм тўпламлари",
+   "photo": ""
+  },
+  {
+   "id": "108170",
+   "name": "1 Primum, духи-концентрат, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108172",
+   "name": "9 Nonum, духи-концентрат, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108375",
+   "name": "Crystal Pear, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108175",
+   "name": "Dark Vanilla & Cherry Blossom, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108176",
+   "name": "Fresh Fig & Sparkling Tangerine, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108376",
+   "name": "Frozen Lily, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108177",
+   "name": "Golden Amber & Midnight Saffron, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108163",
+   "name": "Golden Violet & Amber Absolu, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108374",
+   "name": "Icy Vanilla, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108182",
+   "name": "Neon Rose & Davana, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108180",
+   "name": "Orange Rose & Vanilla, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108179",
+   "name": "Pink Rose & Sea Salt, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108181",
+   "name": "Red Rose & Oud, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108164",
+   "name": "Silver Wood & Oakmoss, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108178",
+   "name": "White Rose & Musk, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108236",
+   "name": "Blue Matcha & Vetiver (Голубая матча и Ветивер), парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108237",
+   "name": "Masala tea & Tobacco (Чай масала и Табак), парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108235",
+   "name": "Neroli Tea & Bergamot (Чай нероли и Бергамот), парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108234",
+   "name": "Tea Blossom & Candy (Цветущий чай и леденцы), парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108233",
+   "name": "White Tea & Mimosa (Белый чай и Мимоза), парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108212",
+   "name": "Arc-en-ciel Bloom, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108205",
+   "name": "Demi-Lune Aqua, парфюмерная вода для мужчин, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108204",
+   "name": "Demi-Lune Ignis, парфюмерная вода для мужчин, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108203",
+   "name": "Demi-Lune Terra, парфюмерная вода для мужчин, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108185",
+   "name": "Demi-Lune № 04, парфюмерная вода для мужчин, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108183",
+   "name": "Demon du Ciel, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108184",
+   "name": "Nuage, парфюмерная вода, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "108214",
+   "name": "Парфюмерная вода Arc-en-Ciel, 1,5 мл",
+   "price": 16500,
+   "points": 0,
+   "category": "parfum",
+   "series": "Пробниклар 1,5 мл",
+   "photo": ""
+  },
+  {
+   "id": "420833",
+   "name": "Балансирующая мицеллярная вода",
+   "price": 172000,
+   "points": 21,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "420834",
+   "name": "Балансирующий тоник для лица",
+   "price": 172000,
+   "points": 21,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "422670",
+   "name": "Восстанавливающий дневной крем для лица SPF 15 / PA +++",
+   "price": 415000,
+   "points": 51,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "420832",
+   "name": "Нежная очищающая эмульсия для лица",
+   "price": 165000,
+   "points": 21,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "424750",
+   "name": "Сыворотка с витамином С для снятия стресса кожи",
+   "price": 165000,
+   "points": 20,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "420841",
+   "name": "Сыворотка с гиалуроновой кислотой",
+   "price": 165000,
+   "points": 20,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "420840",
+   "name": "Успокаивающая сыворотка против несовершенств кожи",
+   "price": 182000,
+   "points": 22.5,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "425441",
+   "name": "BB-крем для лица «Баланс микробиома» SPF 20 / PA+++ (01 светлый)",
+   "price": 217000,
+   "points": 26,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "427050",
+   "name": "BB-крем для лица «Баланс микробиома» SPF 20 / PA+++ (02 бежевый)",
+   "price": 217000,
+   "points": 26,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "420839",
+   "name": "Восстанавливающая ночная крем-маска с пре- и пробиотиками",
+   "price": 415000,
+   "points": 51,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "422671",
+   "name": "Крем для кожи вокруг глаз",
+   "price": 118000,
+   "points": 14.4,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "425442",
+   "name": "Крем-корректор для кожи вокруг глаз «Баланс микробиома»",
+   "price": 118000,
+   "points": 14.4,
+   "category": "beauty",
+   "series": "Experalta Biomelle",
+   "photo": ""
+  },
+  {
+   "id": "416108",
+   "name": "Ампульный концентрат с бакучиолом",
+   "price": 172000,
+   "points": 22,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "418451",
+   "name": "Восстанавливающая эссенция с ниацинамидом 10%",
+   "price": 235000,
+   "points": 30,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "428210",
+   "name": "Крем-лифтинг для кожи вокруг глаз",
+   "price": 155000,
+   "points": 19,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "418449",
+   "name": "Криолифтинговая маска для лица",
+   "price": 156000,
+   "points": 19,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "418441",
+   "name": "Мицеллярная вода для снятия макияжа",
+   "price": 190000,
+   "points": 24,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "418443",
+   "name": "Мягкий гель для умывания с пробиотиками",
+   "price": 156000,
+   "points": 19,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "414339",
+   "name": "Обновляющий и выравнивающий пилинг для лица",
+   "price": 191000,
+   "points": 24,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "418442",
+   "name": "Очищающее масло для умывания",
+   "price": 260000,
+   "points": 32,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "425760",
+   "name": "Ампульный концентрат «Возрождение»",
+   "price": 172000,
+   "points": 22,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "425762",
+   "name": "Ампульный концентрат «Лифтинг и упругость» для зрелой кожи",
+   "price": 172000,
+   "points": 22,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "425761",
+   "name": "Ампульный концентрат «Увлажнение и сияние» для сухой и обезвоженной кожи",
+   "price": 172000,
+   "points": 22,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "418452",
+   "name": "Интеллектуальная сыворотка для лица с растительными пептидами",
+   "price": 460000,
+   "points": 59,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "428820",
+   "name": "Омолаживающий тоник-софтнер",
+   "price": 190000,
+   "points": 24,
+   "category": "beauty",
+   "series": "Experalta Platinum",
+   "photo": ""
+  },
+  {
+   "id": "424751",
+   "name": "Гель интимный на водной основе (без запаха)",
+   "price": 78000,
+   "points": 9.7,
+   "category": "beauty",
+   "series": "Sex Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424752",
+   "name": "Гель интимный на водной основе (клубника)",
+   "price": 78000,
+   "points": 9.7,
+   "category": "beauty",
+   "series": "Sex Wellness",
+   "photo": ""
+  },
+  {
+   "id": "422290",
+   "name": "Гель для душа с конопляным маслом Siberian Herbs",
+   "price": 61000,
+   "points": 7.3,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "425701",
+   "name": "Гель для душа с экстрактом подорожника Siberian Herbs",
+   "price": 61000,
+   "points": 7.3,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424440",
+   "name": "Кондиционер для волос восстанавливающий (церамиды и протеины)",
+   "price": 85000,
+   "points": 10.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424435",
+   "name": "Кондиционер для волос увлажняющий с гиалуроновой кислотой",
+   "price": 85000,
+   "points": 10.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424438",
+   "name": "Кондиционер для объема волос (янтарная кислота и фитокератин)",
+   "price": 85000,
+   "points": 10.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "425702",
+   "name": "Крем для тела с экстрактом подорожника Siberian Herbs",
+   "price": 82000,
+   "points": 9.4,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427529",
+   "name": "Скраб для тела с кедром с ягодами Siberian Herbs",
+   "price": 116000,
+   "points": 12.6,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424439",
+   "name": "Шампунь восстанавливающий (церамиды и протеины)",
+   "price": 78000,
+   "points": 9.6,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424437",
+   "name": "Шампунь для объема волос (янтарная кислота и фитокератин)",
+   "price": 78000,
+   "points": 9.6,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424442",
+   "name": "Шампунь для роста волос с ниацинамидом и перцем",
+   "price": 78000,
+   "points": 9.6,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424434",
+   "name": "Шампунь увлажняющий с гиалуроновой кислотой",
+   "price": 78000,
+   "points": 9.6,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427532",
+   "name": "GREEN-мыло для кухни Siberian Herbs",
+   "price": 104000,
+   "points": 12,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "430735",
+   "name": "«Хусэн Газар» (Сила земли), маска для лица очищающая",
+   "price": 90000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "430736",
+   "name": "«Хусэн Эдир» (Сила молодости), маска для лица лимфодренажная",
+   "price": 90000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "432393",
+   "name": "Бальзам для губ с церамидами",
+   "price": 66000,
+   "points": 7.5,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427519",
+   "name": "Дезодорант для тела",
+   "price": 92000,
+   "points": 11,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427521",
+   "name": "Дезодорант для тела женский",
+   "price": 92000,
+   "points": 11,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427520",
+   "name": "Дезодорант для тела мужской",
+   "price": 92000,
+   "points": 11,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "422291",
+   "name": "Крем для тела с конопляным маслом",
+   "price": 82000,
+   "points": 9.4,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427531",
+   "name": "Маска для волос восстанавливающая Siberian Herbs",
+   "price": 139000,
+   "points": 17.4,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427525",
+   "name": "Масло массажное расслабляющее Siberian Herbs",
+   "price": 87000,
+   "points": 9.9,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427523",
+   "name": "Пилинг для кожи головы",
+   "price": 116000,
+   "points": 14.9,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427522",
+   "name": "Сыворотка для роста волос",
+   "price": 172000,
+   "points": 21.5,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "427524",
+   "name": "Шампунь против перхоти с шалфеем и янтарной кислотой",
+   "price": 78000,
+   "points": 9.6,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "429439",
+   "name": "Ягоды и Фрукты, скраб для тела",
+   "price": 96000,
+   "points": 10,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "429437",
+   "name": "Ягоды и фрукты, гель для душа",
+   "price": 87000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "429438",
+   "name": "Ягоды и фрукты, крем для тела",
+   "price": 96000,
+   "points": 10,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "429458",
+   "name": "Гель для душа увлажняющий Travel, 50 мл",
+   "price": 29900,
+   "points": 3.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "429457",
+   "name": "Кондиционер для волос увлажняющий Travel, 50 мл",
+   "price": 29900,
+   "points": 3.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "429459",
+   "name": "Крем для тела увлажняющий Travel, 50 мл",
+   "price": 29900,
+   "points": 3.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424436",
+   "name": "Сыворотка для кожи головы с гиалуроновой кислотой",
+   "price": 78000,
+   "points": 9.6,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "430721",
+   "name": "Торгон (Шелк), маска для рук",
+   "price": 90000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "430720",
+   "name": "Торгон (Шелк), скраб для рук",
+   "price": 90000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "424441",
+   "name": "Флюид-уход для волос с церамидами и протеинами",
+   "price": 87000,
+   "points": 11.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "429456",
+   "name": "Шампунь увлажняющий Travel, 50 мл",
+   "price": 29900,
+   "points": 3.2,
+   "category": "beauty",
+   "series": "Siberian Wellness",
+   "photo": ""
+  },
+  {
+   "id": "425687",
+   "name": "Dino Skino, крем-баттер",
+   "price": 139000,
+   "points": 17.6,
+   "category": "beauty",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "426985",
+   "name": "Детская зубная паста Dino Dent с ксилитолом «Карамель»",
+   "price": 61000,
+   "points": 6.6,
+   "category": "beauty",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "425758",
+   "name": "Детская зубная паста Dino Dent с ксилитолом «Персик»",
+   "price": 61000,
+   "points": 6.6,
+   "category": "beauty",
+   "series": "ВитаМама",
+   "photo": ""
+  },
+  {
+   "id": "417379",
+   "name": "CoreNRG, природная профилактическая зубная паста",
+   "price": 50000,
+   "points": 5.8,
+   "category": "beauty",
+   "series": "Зубные пасты",
+   "photo": ""
+  },
+  {
+   "id": "428801",
+   "name": "Зубная паста Антибактериальная защита Горная лаванда",
+   "price": 50000,
+   "points": 5.8,
+   "category": "beauty",
+   "series": "Зубные пасты",
+   "photo": ""
+  },
+  {
+   "id": "428800",
+   "name": "Зубная паста Интенсивное укрепление эмали Морской кальций",
+   "price": 50000,
+   "points": 5.8,
+   "category": "beauty",
+   "series": "Зубные пасты",
+   "photo": ""
+  },
+  {
+   "id": "428802",
+   "name": "Зубная паста для осветления эмали «Черника & Древесный уголь»",
+   "price": 61000,
+   "points": 7,
+   "category": "beauty",
+   "series": "Зубные пасты",
+   "photo": ""
+  },
+  {
+   "id": "428799",
+   "name": "Природная профилактическая зубная паста «Сибирский прополис»",
+   "price": 61000,
+   "points": 7,
+   "category": "beauty",
+   "series": "Зубные пасты",
+   "photo": ""
+  },
+  {
+   "id": "425534",
+   "name": "Сибирская чага, природная профилактическая зубная паста",
+   "price": 50000,
+   "points": 5.8,
+   "category": "beauty",
+   "series": "Зубные пасты",
+   "photo": ""
+  },
+  {
+   "id": "423110",
+   "name": "Тоник для лица обновляющий",
+   "price": 92000,
+   "points": 11,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427507",
+   "name": "Бальзам-тоник после бритья",
+   "price": 105000,
+   "points": 13,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427511",
+   "name": "Гель для умывания с омега-кислотами",
+   "price": 76000,
+   "points": 9.6,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427506",
+   "name": "Крем для бритья, 100 мл",
+   "price": 105000,
+   "points": 13,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427535",
+   "name": "Крем для век с омега-кислотами и бета-каротином",
+   "price": 82000,
+   "points": 10.2,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427512",
+   "name": "Крем для лица с омега-кислотами и бета-каротином",
+   "price": 105000,
+   "points": 13.5,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427516",
+   "name": "Крем для проблемной кожи",
+   "price": 125000,
+   "points": 16,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427514",
+   "name": "Крем-комплекс для зрелой кожи",
+   "price": 125000,
+   "points": 16,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427505",
+   "name": "Шампунь для волос и тела мужской",
+   "price": 105000,
+   "points": 12.5,
+   "category": "beauty",
+   "series": "Endemix",
+   "photo": ""
+  },
+  {
+   "id": "427557",
+   "name": "Chronolong крем дневной с фитоэстрогенами",
+   "price": 226000,
+   "points": 28,
+   "category": "beauty",
+   "series": "Women's Beauty",
+   "photo": ""
+  },
+  {
+   "id": "427558",
+   "name": "Chronolong крем ночной c фитоэстрогенами",
+   "price": 226000,
+   "points": 28,
+   "category": "beauty",
+   "series": "Women's Beauty",
+   "photo": ""
+  },
+  {
+   "id": "427559",
+   "name": "Chronolong молочко для шеи и декольте с фитоэстрогенами",
+   "price": 226000,
+   "points": 28,
+   "category": "beauty",
+   "series": "Women's Beauty",
+   "photo": ""
+  },
+  {
+   "id": "430579",
+   "name": "Гель для деликатного ухода с фитоэстрогенами",
+   "price": 87000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Women's Beauty",
+   "photo": ""
+  },
+  {
+   "id": "430578",
+   "name": "Део-гель для интимной гигиены с фитоэстрогенами",
+   "price": 103000,
+   "points": 12,
+   "category": "beauty",
+   "series": "Women's Beauty",
+   "photo": ""
+  },
+  {
+   "id": "430580",
+   "name": "Крем для рук с фитоэстрогенами",
+   "price": 78000,
+   "points": 9,
+   "category": "beauty",
+   "series": "Women's Beauty",
+   "photo": ""
+  },
+  {
+   "id": "432404",
+   "name": "MAGIC MOMENTS Гель для душа с ароматом шоколада и кокоса",
+   "price": 92000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "432405",
+   "name": "MAGIC MOMENTS Крем-баттер для тела с ароматом шоколада и кокоса",
+   "price": 101000,
+   "points": 10,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "432406",
+   "name": "MAGIC MOMENTS Скраб для тела с ароматом шоколада и кокоса",
+   "price": 101000,
+   "points": 10,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "432407",
+   "name": "Мужская территория, гель для душа",
+   "price": 92000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "432408",
+   "name": "Мужская территория, крем универсальный",
+   "price": 92000,
+   "points": 10.5,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "432553",
+   "name": "Набор «Очищение и комфорт»",
+   "price": 346000,
+   "points": 42,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "432414",
+   "name": "Набор «Черника и древесный уголь»",
+   "price": 103000,
+   "points": 8,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "429833",
+   "name": "Набор для здоровой улыбки «Сибирский прополис»",
+   "price": 99000,
+   "points": 8,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "432677",
+   "name": "Набор «Молодость и сияние»",
+   "price": 556000,
+   "points": 68,
+   "category": "beauty",
+   "series": "Мавсумий таклиф",
+   "photo": ""
+  },
+  {
+   "id": "429632",
+   "name": "Антибактериальная зубная паста с энзимами для комплексного ухода и защиты от кариеса",
+   "price": 61000,
+   "points": 7,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429634",
+   "name": "Антибактериальный ополаскиватель для комплексного ухода и свежести дыхания",
+   "price": 85000,
+   "points": 8.5,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429633",
+   "name": "Очищающая пенка для экспресс-гигиены полости рта и свежести дыхания",
+   "price": 66000,
+   "points": 8,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429631",
+   "name": "Противовоспалительная зубная паста с энзимами для профилактики заболеваний пародонта",
+   "price": 61000,
+   "points": 7,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "430025",
+   "name": "Фитомыло для интимной гигиены",
+   "price": 103000,
+   "points": 11.5,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429626",
+   "name": "Крем для лица дневной с антиоксидантами SPF 30",
+   "price": 137000,
+   "points": 16,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429630",
+   "name": "Маска отбеливающая c антиоксидантами",
+   "price": 139000,
+   "points": 17.4,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429624",
+   "name": "Мицеллярная вода с антиоксидантами",
+   "price": 100000,
+   "points": 12,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "430584",
+   "name": "Пенка для интимной гигиены",
+   "price": 92000,
+   "points": 11,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429623",
+   "name": "Пенка для умывания c антиоксидантами",
+   "price": 103000,
+   "points": 12,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "430582",
+   "name": "Солнцезащитное молочко для тела SPF 30",
+   "price": 259000,
+   "points": 29.3,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "430581",
+   "name": "Солнцезащитный крем для лица SPF 50",
+   "price": 172000,
+   "points": 21,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429625",
+   "name": "Тоник для лица с антиоксидантами",
+   "price": 100000,
+   "points": 12,
+   "category": "beauty",
+   "series": "Siberian Code",
+   "photo": ""
+  },
+  {
+   "id": "429794",
+   "name": "Бобы тонка и табак, парфюмированный крем для рук",
+   "price": 57000,
+   "points": 6.7,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "429791",
+   "name": "Бобы тонка и табак, парфюмированный крем для тела",
+   "price": 120000,
+   "points": 13,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "429788",
+   "name": "Бобы тонка и табак, парфюмированный скраб для тела",
+   "price": 138000,
+   "points": 15.5,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "429793",
+   "name": "Ветивер и мускус, парфюмированный крем для рук",
+   "price": 57000,
+   "points": 6.7,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "429790",
+   "name": "Ветивер и мускус, парфюмированный крем для тела",
+   "price": 120000,
+   "points": 13,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "429787",
+   "name": "Ветивер и мускус, парфюмированный скраб для тела",
+   "price": 138000,
+   "points": 15.5,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "429789",
+   "name": "Нероли и бергамот, парфюмированный крем для тела",
+   "price": 120000,
+   "points": 13,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "429786",
+   "name": "Нероли и бергамот, парфюмированный скраб для тела",
+   "price": 138000,
+   "points": 15.5,
+   "category": "beauty",
+   "series": "Парфюмированный уход",
+   "photo": ""
+  },
+  {
+   "id": "424407",
+   "name": "Гель для душа (интенсивное увлажнение)",
+   "price": 99000,
+   "points": 11.8,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "424403",
+   "name": "Гель для умывания (тонус и увлажнение)",
+   "price": 85000,
+   "points": 10.2,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "424412",
+   "name": "Кондиционер для волос (увлажнение и блеск)",
+   "price": 103000,
+   "points": 12.3,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "424405",
+   "name": "Крем для лица (лифтинг и увлажнение)",
+   "price": 125000,
+   "points": 15.7,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "424408",
+   "name": "Крем для тела (увлажнение и упругость)",
+   "price": 108000,
+   "points": 12.9,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "424406",
+   "name": "Маска для лица (увлажнение и ровный тон)",
+   "price": 125000,
+   "points": 15.7,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "430737",
+   "name": "Пудра энзимная для умывания",
+   "price": 108000,
+   "points": 12.9,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "424410",
+   "name": "Шампунь (увлажнение и объем)",
+   "price": 103000,
+   "points": 12.3,
+   "category": "beauty",
+   "series": "Wellness Sea",
+   "photo": ""
+  },
+  {
+   "id": "427778",
+   "name": "Пептидный гель для роста и фиксации бровей",
+   "price": 85000,
+   "points": 10,
+   "category": "beauty",
+   "series": "Enigma",
+   "photo": ""
+  },
+  {
+   "id": "410054",
+   "name": "Спортивный восстанавливающий гель",
+   "price": 163000,
+   "points": 19.5,
+   "category": "sport",
+   "series": "Fitness Catalyst",
+   "photo": ""
+  },
+  {
+   "id": "415535",
+   "name": "«Живокост», восстанавливающий бальзам форте (без коробки)",
+   "price": 61000,
+   "points": 7.3,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "414328",
+   "name": "«Уян Номо», бальзам для тела",
+   "price": 61000,
+   "points": 7.3,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "409066",
+   "name": "Бальзам широкого спектра действия «Корень»",
+   "price": 95000,
+   "points": 10.7,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "409069",
+   "name": "Бальзам-флорасептик «Эльбэшэн»",
+   "price": 76000,
+   "points": 8.8,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "416558",
+   "name": "Восстанавливающий бальзам",
+   "price": 61000,
+   "points": 7.3,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "417706",
+   "name": "Восстанавливающий гель с пантенолом",
+   "price": 76000,
+   "points": 8.8,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "402692",
+   "name": "Живокост. Бальзам с экстрактом окопника, глюкозамином и хондроитином",
+   "price": 61000,
+   "points": 7.3,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "416559",
+   "name": "Тонизирующий крем для ног",
+   "price": 113000,
+   "points": 13,
+   "category": "health",
+   "series": "Сибирские бальзамы",
+   "photo": ""
+  },
+  {
+   "id": "108438",
+   "name": "Ланъярд для телефона",
+   "price": 100000,
+   "points": 0,
+   "category": "other",
+   "series": "Аксессуарлар",
+   "photo": ""
+  },
+  {
+   "id": "108437",
+   "name": "Таблетница, 8 отделений",
+   "price": 40000,
+   "points": 0,
+   "category": "other",
+   "series": "Аксессуарлар",
+   "photo": ""
+  },
+  {
+   "id": "108439",
+   "name": "Шейкер, 400 мл",
+   "price": 60000,
+   "points": 0,
+   "category": "other",
+   "series": "Аксессуарлар",
+   "photo": ""
+  }
+ ]
+}
