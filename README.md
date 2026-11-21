@@ -9,3 +9,4 @@ LUMA Coffee сайти `main` шохчасида турибди, унга тег
 - `siberian/index.html` — мини-апп
 - `siberian/products.json` — маҳсулотлар ва нархлар (нарх ўзгарса, шу файлни янгилаш кифоя)
 - `siberian/bot.tar.gz` — Telegram бот коди: Colab ноутбуки ишга тушганда шу ердан янгиланади
+- `siberian/fonts/` — Onest шрифти (SIL Open Font License, `OFL.txt`)

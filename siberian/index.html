@@ -3,282 +3,419 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0C4A57">
 <title>Siberian каталог</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:"Onest";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/onest-cyrillic-ext-400.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:"Onest";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/onest-cyrillic-400.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Onest";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/onest-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Onest";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/onest-cyrillic-ext-600.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:"Onest";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/onest-cyrillic-600.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Onest";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/onest-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Onest";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/onest-cyrillic-ext-800.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:"Onest";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/onest-cyrillic-800.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Onest";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/onest-latin-800.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* Байкал (чуқур кўл), облепиха (Сибирь мевасини эслатувчи тўқ сариқ), муз */
 :root{
-  --bg:var(--tg-theme-bg-color,#ffffff);
-  --text:var(--tg-theme-text-color,#16211b);
-  --hint:var(--tg-theme-hint-color,#78827c);
-  --surface:var(--tg-theme-secondary-bg-color,#f1f3ef);
-  --taiga:#1f4d3a; --taiga-ink:#1f4d3a; --on-taiga:#ffffff;
-  --health:#3e7c59; --beauty:#b8436a; --parfum:#6b5ca5; --sport:#d9741f; --other:#7a7f73;
-  --health-soft:rgba(62,124,89,.13); --beauty-soft:rgba(184,67,106,.12); --parfum-soft:rgba(107,92,165,.13);
-  --sport-soft:rgba(217,116,31,.13); --other-soft:rgba(122,127,115,.14);
-  --display:"Unbounded",system-ui,sans-serif; --ui:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --baikal:#0C4A57; --baikal-2:#14687A; --baikal-ink:#0C4A57; --baikal-soft:#DDECEE;
+  --buck:#F2801F; --buck-press:#DD6E10; --buck-soft:#FDEBDA; --buck-ink:#8A4300; --on-buck:#1C1206;
+  --page:#EEF4F5; --card:#FFFFFF; --well:#FFFFFF; --ink:#15272C; --hint:#5D7176; --line:#D9E4E6;
+  --font:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
 }
-html.dark{--taiga:#2e6b51;--taiga-ink:#8fcfa9;--health:#74b892;--beauty:#e48aa9;--parfum:#ab9de6;--sport:#f0a35a;--other:#aeb2a6;
-  --health-soft:rgba(110,190,145,.16);--beauty-soft:rgba(230,120,160,.15);--parfum-soft:rgba(160,145,225,.16);
-  --sport-soft:rgba(240,150,70,.16);--other-soft:rgba(180,185,170,.14)}
+html.dark{
+  --baikal:#0A3A44; --baikal-2:#11586A; --baikal-ink:#7ED0D8; --baikal-soft:#14343B;
+  --buck-soft:#3B2716; --buck-ink:#FFB877;
+  --page:#0C1618; --card:#142226; --well:#F3F6F6; --ink:#E5EEEF; --hint:#92A5A9; --line:#22363B;
+}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.45 var(--ui);padding-bottom:calc(84px + env(safe-area-inset-bottom))}
-button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
-button:focus-visible,input:focus-visible{outline:2px solid var(--taiga-ink);outline-offset:2px}
-.wrap{max-width:640px;margin:0 auto;padding:0 14px}
-header{padding:18px 0 6px}
-h1{font:600 23px/1.15 var(--display);margin:0 0 4px;letter-spacing:-.01em}
-.sub{color:var(--hint);font-size:13px;margin:0}
-.search{display:block;position:relative;margin:14px 0 10px}
-.search input{width:100%;height:44px;border:0;border-radius:14px;background:var(--surface);color:var(--text);font:inherit;padding:0 14px 0 42px}
-.search input::placeholder{color:var(--hint)}
-.search svg{position:absolute;left:14px;top:12px;width:20px;height:20px;stroke:var(--hint)}
-.promo{display:flex;align-items:center;gap:12px;background:var(--surface);border-radius:16px;padding:12px 12px 12px 14px;margin:0 0 12px}
-.promo p{margin:0;font-size:14px;line-height:1.35;flex:1}
-.promo b{font-weight:600;color:var(--taiga-ink)}
-.promo button{background:var(--taiga);color:var(--on-taiga);border-radius:11px;padding:9px 12px;font-weight:600;font-size:13px;white-space:nowrap}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 14px 10px;margin:0 -14px;scrollbar-width:none}
-.chips::-webkit-scrollbar{display:none}
-.chip{flex:none;display:flex;align-items:center;gap:7px;height:36px;padding:0 13px;border-radius:18px;background:var(--surface);font-size:14px;font-weight:500;white-space:nowrap}
-.chip i{width:8px;height:8px;border-radius:50%;background:var(--c,var(--taiga))}
-.chip small{color:var(--hint);font-size:12px;font-weight:400}
-.chip[aria-pressed=true]{background:var(--c,var(--taiga));color:var(--bg)}
-.chip[data-cat=all][aria-pressed=true]{background:var(--taiga);color:#fff}
-.chip[aria-pressed=true] i{background:currentColor}.chip[aria-pressed=true] small{color:inherit;opacity:.75}
-.series .chip{height:30px;font-size:13px;padding:0 11px;font-weight:400}
-.series .chip[aria-pressed=true]{background:var(--text);color:var(--bg)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;padding:4px 0 8px}
-@media (min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.card{display:flex;flex-direction:column;min-width:0}
-.label{filter:hue-rotate(var(--h,0deg));position:relative;aspect-ratio:1/1;border-radius:18px;background:var(--soft);display:flex;align-items:center;justify-content:center;overflow:hidden;width:100%}
-.label::after{content:"";position:absolute;inset:7px;border-radius:12px;border:1px solid var(--c);opacity:.32;pointer-events:none}
-.label svg{width:42%;height:42%;stroke:var(--c);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
-.label .ser{position:absolute;left:15px;right:15px;top:13px;font-size:11.5px;line-height:1.25;color:var(--c);font-weight:500;text-align:left;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.label img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.name{margin:9px 2px 6px;font-size:14px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em;text-align:left}
-.row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 6px;margin:auto 2px 0}
-.row>span[data-ctl]{margin-left:auto}
-.price{font:600 14.5px/1.15 var(--display);letter-spacing:-.01em;white-space:nowrap}
-.price span,.cur{font:400 12px var(--ui);color:var(--hint);letter-spacing:0}
-.pts{display:block;color:var(--hint);font-size:12px;margin-top:4px}
-.add{flex:none;width:36px;height:36px;border-radius:50%;background:var(--taiga);color:var(--on-taiga);display:flex;align-items:center;justify-content:center}
-.add svg,.step svg{width:18px;height:18px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round}
-.step{flex:none;display:flex;align-items:center;height:36px;border-radius:18px;background:var(--taiga);color:var(--on-taiga)}
-.step button{width:34px;height:36px;display:flex;align-items:center;justify-content:center}
-.step b{min-width:16px;text-align:center;font-weight:600;font-size:14px}
-.empty{text-align:center;color:var(--hint);padding:48px 12px}
-footer{color:var(--hint);font-size:12px;padding:18px 0 8px;line-height:1.5}
-.bar{position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--bg);box-shadow:0 -1px 0 rgba(0,0,0,.06)}
-.bar button{width:100%;max-width:612px;margin:0 auto;display:block;height:50px;border-radius:14px;background:var(--taiga);color:var(--on-taiga);font-weight:600;font-size:15px}
+html{background:var(--page)}
+body{margin:0;background:var(--page);color:var(--ink);font:400 15px/1.45 var(--font);padding-bottom:calc(88px + env(safe-area-inset-bottom));-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+button:focus-visible,input:focus-visible{outline:2px solid var(--buck);outline-offset:2px}
+[hidden]{display:none!important}
 .view{display:none}.view.on{display:block}
-.cart h2{font:600 20px/1.2 var(--display);margin:18px 0 12px}
-.line{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--surface)}
-.line .dot{flex:none;width:44px;height:44px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center}
-.line .dot svg{width:24px;height:24px;stroke:var(--c);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:680px;margin:0 auto}
+
+/* Тепа: кўл ранги, қидирув ёпишқоқ, остида тайга */
+.band{background:var(--baikal);color:#fff;padding:18px 16px 4px}
+.band .in{max-width:648px;margin:0 auto;display:flex;align-items:flex-start;gap:12px}
+.band .titles{flex:1;min-width:0}
+.band h1{font-size:26px;line-height:1.1;font-weight:800;margin:0;letter-spacing:-.02em}
+.band p{margin:5px 0 0;font-size:13px;color:rgba(255,255,255,.78)}
+.cartbtn{position:relative;flex:none;width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
+.cartbtn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.cartbtn b{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--buck);color:var(--on-buck);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.cartbtn.bump{animation:bump .35s ease}
+@keyframes bump{40%{transform:scale(1.14)}}
+.back{flex:none;width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
+.back svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.searchbar{position:sticky;top:0;z-index:10;background:var(--baikal);padding:10px 16px 10px}
+.search{position:relative;display:block;max-width:648px;margin:0 auto}
+.search input{width:100%;height:46px;border:0;border-radius:14px;background:#fff;color:#15272C;font:500 15px var(--font);padding:0 40px 0 44px;-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:#7A8C90;font-weight:400}
+.search input::-webkit-search-cancel-button{display:none}
+.search .glass{position:absolute;left:14px;top:13px;width:20px;height:20px;stroke:#5D7176;fill:none;stroke-width:2;stroke-linecap:round}
+.search .clear{position:absolute;right:6px;top:7px;width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.search .clear svg{width:16px;height:16px;stroke:#5D7176;stroke-width:2.2;stroke-linecap:round}
+.taiga{background:var(--baikal);line-height:0}
+.taiga svg{display:block;width:100%;height:24px}
+.taiga path{fill:var(--page)}
+
+/* Бўлимлар: Instagram'даги «stories» каби доиралар */
+.cats{display:flex;gap:6px;overflow-x:auto;padding:4px 10px 2px;scrollbar-width:none}
+.cats::-webkit-scrollbar,.promos::-webkit-scrollbar,.chips::-webkit-scrollbar{display:none}
+.cat{flex:none;width:76px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:4px 0}
+.ring{display:block;width:68px;height:68px;border-radius:50%;padding:3px;background:var(--line);transition:background .15s}
+.cat[aria-pressed=true] .ring{background:var(--buck)}
+.disc{display:block;position:relative;width:100%;height:100%;border-radius:50%;background:var(--well);border:2.5px solid var(--page);overflow:hidden}
+.disc img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:7px}
+.disc.all img{width:50%;height:50%;padding:3px}
+.disc.all img:nth-child(2){left:50%}.disc.all img:nth-child(3){top:50%}.disc.all img:nth-child(4){left:50%;top:50%}
+.cat .lbl{font-size:12px;font-weight:600;line-height:1.2;max-width:76px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cat[aria-pressed=true] .lbl{color:var(--baikal-ink)}
+
+/* Таклифлар */
+.promos{display:flex;gap:10px;overflow-x:auto;padding:12px 16px 4px;scroll-snap-type:x mandatory;scroll-padding:16px;scrollbar-width:none}
+.promo{position:relative;flex:none;width:80%;max-width:310px;min-height:104px;scroll-snap-align:start;border-radius:20px;padding:15px 16px;text-align:left;display:flex;flex-direction:column;gap:5px;overflow:hidden}
+.promo b{position:relative;font-size:20px;line-height:1.12;font-weight:800;letter-spacing:-.01em;max-width:72%}
+.promo span{position:relative;font-size:13.5px;line-height:1.35;max-width:74%}
+.promo.reg{background:var(--buck);color:var(--on-buck)}
+.promo.reg em{position:relative;margin-top:auto;align-self:flex-start;font-style:normal;font-size:13px;font-weight:700;background:var(--on-buck);color:#fff;border-radius:10px;padding:6px 11px}
+.promo.ship{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.promo.ship span{color:var(--hint)}
+.promo .art{position:absolute;right:-6px;bottom:-8px;width:104px;height:104px;pointer-events:none}
+
+/* Сериялар */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 16px 0;scrollbar-width:none}
+.chip{flex:none;height:36px;padding:0 15px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:13.5px;font-weight:600;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--page)}
+
+/* Маҳсулотлар */
+.sec{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:22px 16px 10px}
+.sec h2{font-size:21px;line-height:1.15;font-weight:800;margin:0;letter-spacing:-.015em}
+.sec small{font-size:13px;color:var(--hint);font-weight:400;margin-left:6px;letter-spacing:0}
+.sec .more{flex:none;font-size:14px;font-weight:600;color:var(--baikal-ink);padding:6px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 12px}
+@media (min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{background:var(--card);border-radius:20px;padding:6px 6px 8px;display:flex;flex-direction:column;min-width:0}
+.ph{position:relative;display:block;width:100%;aspect-ratio:1/1;border-radius:15px;background:var(--well);overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:9px}
+.noimg{background:var(--well) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2399B3B8' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21V10'/%3E%3Cpath d='M12 13c-4.5 0-7-3-7-8 4.5 0 7 3 7 8Z'/%3E%3Cpath d='M12 10c0-4 2.5-6.5 7-6.5 0 4.5-2.5 7-7 6.5Z'/%3E%3C/svg%3E") center/34% no-repeat!important}
+.pts{position:absolute;left:7px;top:7px;background:#FDEBDA;color:#8A4300;font-size:11.5px;font-weight:700;line-height:1;border-radius:8px;padding:5px 7px}
+.body{display:flex;flex-direction:column;flex:1;padding:9px 5px 0}
+.price{font-size:17px;line-height:1.15;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price small{font-size:12px;font-weight:600;color:var(--hint);letter-spacing:0}
+.name{margin:4px 0 10px;font-size:13.5px;line-height:1.3;text-align:left;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+.ctl{margin-top:auto}
+.buy{width:100%;height:40px;border-radius:13px;background:var(--buck);color:var(--on-buck);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px}
+.buy:active{background:var(--buck-press)}
+.buy svg,.qty svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.qty{display:flex;align-items:center;justify-content:space-between;height:40px;border-radius:13px;background:var(--buck-soft);color:var(--ink)}
+.qty button{width:44px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:13px}
+.qty b{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.skel .ph,.skel .sk{background:linear-gradient(90deg,var(--line),var(--card),var(--line));background-size:200% 100%;animation:sk 1.2s linear infinite}
+.skel .sk{height:14px;border-radius:7px;margin:10px 5px 0}
+@keyframes sk{to{background-position:-200% 0}}
+.empty{text-align:center;color:var(--hint);padding:42px 24px}
+footer{color:var(--hint);font-size:12px;line-height:1.5;padding:26px 18px 6px;max-width:680px;margin:0 auto}
+
+/* Сават */
+.list{padding:2px 12px 0}
+.line{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:18px;padding:8px 10px 8px 8px;margin-bottom:8px}
+.thumb{position:relative;flex:none;width:68px;height:68px;border-radius:13px;background:var(--well);overflow:hidden}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5px}
 .line .info{flex:1;min-width:0}
-.line .info p{margin:0 0 3px;font-size:14px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.line .info small{color:var(--hint);font-size:12.5px}
-.seg{display:flex;background:var(--surface);border-radius:12px;padding:3px;margin:18px 0 6px}
-.seg button{flex:1;height:36px;border-radius:9px;font-size:14px;font-weight:500;color:var(--hint)}
-.seg button[aria-pressed=true]{background:var(--bg);color:var(--text);box-shadow:0 1px 2px rgba(0,0,0,.08)}
-.note{color:var(--hint);font-size:12.5px;margin:6px 2px 0}
-.sum{margin:16px 0 4px}
-.sum div{display:flex;justify-content:space-between;padding:5px 2px;font-size:14px}
-.sum .total{font:600 17px var(--display);padding-top:10px;margin-top:6px;border-top:1px solid var(--surface)}
-.cb{background:var(--surface);border-radius:16px;padding:14px;margin:16px 0}
-.cb p{margin:0 0 10px;font-size:14px;line-height:1.4}
-.cb b{color:var(--taiga-ink);font-weight:600}
-.meter{position:relative;height:8px;border-radius:4px;background:rgba(127,127,127,.18);overflow:hidden}
-.meter i{position:absolute;left:0;top:0;bottom:0;background:var(--taiga);border-radius:4px;transition:width .3s ease}
-.ticks{position:relative;height:16px;font-size:11.5px;color:var(--hint);margin-top:6px}
+.line .info p{margin:0 0 4px;font-size:13.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.line .info b{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
+.line .info small{display:block;color:var(--hint);font-size:12px;margin-top:2px}
+.line .qty{flex:none;width:118px;height:36px}
+.line .qty button{width:38px;height:36px}
+.panel{background:var(--card);border-radius:20px;padding:14px 16px;margin:10px 12px 0}
+.panel h3{font-size:15px;font-weight:800;margin:0 0 10px}
+.seg{display:flex;background:var(--page);border-radius:13px;padding:3px}
+.seg button{flex:1;height:38px;border-radius:10px;font-size:14px;font-weight:600;color:var(--hint)}
+.seg button[aria-pressed=true]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(12,74,87,.14)}
+.note{color:var(--hint);font-size:12.5px;line-height:1.4;margin:8px 2px 0}
+.sum div{display:flex;justify-content:space-between;gap:10px;padding:4px 0;font-size:14px}
+.sum .total{font-size:18px;font-weight:800;padding-top:10px;margin-top:6px;border-top:1px solid var(--line)}
+.cb{background:var(--baikal-soft)}
+.cb p{margin:0 0 12px;font-size:14px;line-height:1.4}
+.cb b{color:var(--baikal-ink);font-weight:800}
+.meter{position:relative;height:10px;border-radius:5px;background:rgba(12,74,87,.14);overflow:hidden}
+html.dark .meter{background:rgba(126,208,216,.16)}
+.meter i{position:absolute;left:0;top:0;bottom:0;background:var(--buck);border-radius:5px;transition:width .3s ease}
+.meter s{position:absolute;top:0;bottom:0;width:2px;background:var(--baikal-soft)}
+.ticks{position:relative;height:16px;font-size:11.5px;font-weight:600;color:var(--hint);margin-top:6px}
 .ticks span{position:absolute;transform:translateX(-50%)}.ticks span:last-child{transform:none;right:0}
-.meter b{position:absolute;top:0;bottom:0;width:2px;background:var(--bg);opacity:.9}
-.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.42);display:none;align-items:flex-end;z-index:20}
+.regcta{display:flex;align-items:center;gap:12px;border:1.5px solid var(--buck);background:var(--card)}
+.regcta p{flex:1;margin:0;font-size:13.5px;line-height:1.4}
+.regcta button{flex:none;height:38px;padding:0 13px;border-radius:12px;background:var(--buck);color:var(--on-buck);font-weight:700;font-size:13.5px}
+
+/* Пастки ойна (маҳсулот, кешбэк) */
+.sheet-bg{position:fixed;inset:0;z-index:20;background:rgba(6,24,28,.5);display:none;align-items:flex-end}
 .sheet-bg.on{display:flex}
-.sheet{width:100%;max-width:640px;margin:0 auto;background:var(--bg);border-radius:22px 22px 0 0;padding:10px 16px calc(18px + env(safe-area-inset-bottom));transform:translateY(0);animation:up .22s ease-out}
-@keyframes up{from{transform:translateY(40px);opacity:.6}}
-.grab{width:38px;height:5px;border-radius:3px;background:rgba(127,127,127,.35);margin:0 auto 14px}
-.sheet .label{aspect-ratio:2/1}
-.sheet h3{font-size:17px;line-height:1.3;font-weight:600;margin:14px 0 4px}
-.sheet .meta{color:var(--hint);font-size:13px;margin:0 0 14px}
-.sheet .row{margin:0 0 16px}
-.sheet .price{font-size:20px}
-.btns{display:flex;gap:10px}
-.btns button{flex:1;height:48px;border-radius:14px;font-weight:600}
-.primary{background:var(--taiga);color:var(--on-taiga)}
-.ghost{background:var(--surface)}
-.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--text);color:var(--bg);padding:9px 14px;border-radius:12px;font-size:13.5px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:30;max-width:88%}
+.sheet{width:100%;max-width:680px;max-height:92vh;overflow-y:auto;margin:0 auto;background:var(--card);border-radius:24px 24px 0 0;padding:10px 16px calc(18px + env(safe-area-inset-bottom));animation:up .24s cubic-bezier(.2,.8,.2,1)}
+@keyframes up{from{transform:translateY(48px);opacity:.5}}
+.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 12px}
+.hero{position:relative;width:100%;aspect-ratio:1/1;max-height:40vh;border-radius:20px;background:var(--well);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px}
+.sheet h3{font-size:19px;line-height:1.25;font-weight:800;margin:14px 0 4px;letter-spacing:-.01em}
+.sheet .meta{color:var(--hint);font-size:13px;margin:0}
+.sheet .prow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0}
+.sheet .price{font-size:25px}
+.sheet .prow .pts{position:static;font-size:12.5px;padding:6px 9px}
+.hint{display:flex;gap:10px;align-items:center;background:var(--baikal-soft);border-radius:14px;padding:10px 12px;font-size:13px;line-height:1.35;margin:0 0 14px;text-align:left;width:100%}
+.hint svg{flex:none;width:20px;height:20px;stroke:var(--baikal-ink);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.hint u{text-decoration:none;font-weight:700;color:var(--baikal-ink);white-space:nowrap}
+.btns{display:flex;flex-direction:column;gap:8px}
+.btns .buy,.btns .qty{height:50px;border-radius:15px;font-size:15.5px}
+.btns .qty button{width:56px;height:50px}
+.ghost{height:48px;border-radius:15px;border:1.5px solid var(--line);font-weight:700;font-size:15px;color:var(--baikal-ink)}
+.steps{margin:6px 0 16px;padding:0;list-style:none;counter-reset:s}
+.steps li{position:relative;padding:0 0 12px 40px;font-size:14px;line-height:1.4;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:28px;height:28px;border-radius:50%;background:var(--buck-soft);color:var(--buck-ink);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.lv{display:flex;gap:8px;margin:2px 0 16px}
+.lv div{flex:1;background:var(--page);border-radius:14px;padding:10px 8px;text-align:center}
+.lv b{display:block;font-size:20px;font-weight:800;color:var(--baikal-ink)}
+.lv span{font-size:12px;color:var(--hint)}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:15;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--page)}
+.bar button{display:block;width:100%;max-width:652px;margin:0 auto;height:52px;border-radius:16px;background:var(--baikal);color:#fff;font-weight:700;font-size:15.5px}
+.toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;max-width:88%;background:var(--ink);color:var(--page);padding:10px 14px;border-radius:13px;font-size:13.5px;line-height:1.35;opacity:0;pointer-events:none;transition:opacity .2s}
 .toast.on{opacity:1}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <section class="view on" id="catalog">
-    <header>
-      <h1>Siberian каталог</h1>
-      <p class="sub" id="sub">Маҳсулотлар юкланяпти…</p>
-    </header>
+<section class="view on" id="catalog">
+  <header class="band">
+    <div class="in">
+      <div class="titles">
+        <h1>Siberian каталог</h1>
+        <p id="sub">Маҳсулотлар юкланяпти…</p>
+      </div>
+      <button class="cartbtn" id="cartBtn" aria-label="Сават">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.2l2.1 11.2a2 2 0 0 0 2 1.6h8.1a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17.5" cy="20.5" r="1.3"/></svg>
+        <b id="cartCount" hidden>0</b>
+      </button>
+    </div>
+  </header>
+  <div class="searchbar">
     <label class="search">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Номи ёки коди бўйича қидириш" autocomplete="off" aria-label="Қидириш">
+      <svg class="glass" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+      <input id="q" type="search" inputmode="search" placeholder="Маҳсулот номи ёки коди" autocomplete="off" aria-label="Қидириш">
+      <button class="clear" id="qClear" type="button" aria-label="Тозалаш" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </label>
-    <div class="promo" id="promo" hidden>
-      <p>Бепул рўйхатдан ўтинг ва харидларга <b>15% гача кешбэк</b> олинг.</p>
-      <button id="promoBtn">Рўйхатдан ўтиш</button>
+  </div>
+  <div class="taiga" aria-hidden="true"><svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0.0 30.0 L0.0 24.0 L0.0 24.5 L3.6 21.3 L2.0 21.8 L4.5 17.3 L3.2 17.8 L5.6 13.6 L8.1 17.8 L6.8 17.3 L9.2 21.8 L7.7 21.3 L11.3 24.5 L6.5 22.7 L10.6 20.0 L8.8 20.6 L11.6 14.9 L10.1 15.5 L12.9 10.1 L15.7 15.5 L14.1 14.9 L16.9 20.6 L15.2 20.0 L19.2 22.7 L15.8 22.7 L18.7 19.6 L17.4 20.2 L19.5 14.1 L18.4 14.8 L20.4 9.1 L22.4 14.8 L21.3 14.1 L23.4 20.2 L22.1 19.6 L25.0 22.7 L21.1 22.9 L25.0 17.2 L23.3 18.1 L25.9 9.7 L24.5 10.7 L27.1 2.8 L29.8 10.7 L28.3 9.7 L31.0 18.1 L29.3 17.2 L33.1 22.9 L28.7 24.2 L33.0 16.4 L31.1 17.4 L34.0 8.4 L32.4 9.4 L35.4 0.8 L38.3 9.4 L36.7 8.4 L39.6 17.4 L37.8 16.4 L42.1 24.2 L37.9 25.1 L43.0 21.9 L40.7 22.3 L44.2 18.5 L42.3 18.9 L45.8 15.3 L49.3 18.9 L47.4 18.5 L50.9 22.3 L48.7 21.9 L53.7 25.1 L48.2 23.4 L51.4 21.5 L50.0 22.0 L52.2 17.7 L51.0 18.2 L53.2 14.1 L55.4 18.2 L54.2 17.7 L56.4 22.0 L55.0 21.5 L58.2 23.4 L56.6 24.4 L59.9 18.7 L58.4 19.4 L60.7 12.5 L59.4 13.3 L61.7 6.7 L64.0 13.3 L62.7 12.5 L65.0 19.4 L63.6 18.7 L66.8 24.4 L63.6 22.7 L67.7 21.8 L65.9 22.3 L68.7 18.3 L67.1 18.7 L70.0 15.0 L72.8 18.7 L71.3 18.3 L74.1 22.3 L72.3 21.8 L76.4 22.7 L71.5 23.4 L75.9 19.6 L74.0 20.3 L77.0 14.2 L75.4 14.9 L78.4 9.2 L81.4 14.9 L79.8 14.2 L82.8 20.3 L80.9 19.6 L85.3 23.4 L81.9 24.9 L85.8 20.4 L84.1 21.0 L86.8 15.6 L85.3 16.2 L88.0 11.2 L90.7 16.2 L89.2 15.6 L91.9 21.0 L90.2 20.4 L94.1 24.9 L91.6 24.1 L95.0 18.7 L93.5 19.5 L95.9 12.6 L94.6 13.3 L97.0 6.8 L99.3 13.3 L98.0 12.6 L100.4 19.5 L98.9 18.7 L102.3 24.1 L100.8 25.4 L105.3 20.4 L103.3 21.0 L106.4 15.8 L104.7 16.4 L107.8 11.4 L110.9 16.4 L109.2 15.8 L112.3 21.0 L110.4 20.4 L114.9 25.4 L109.1 23.0 L112.9 17.6 L111.3 18.5 L113.9 10.5 L112.5 11.4 L115.1 3.9 L117.7 11.4 L116.3 10.5 L118.9 18.5 L117.2 17.6 L121.0 23.0 L117.7 24.8 L120.7 18.1 L119.4 19.0 L121.4 11.5 L120.3 12.3 L122.4 5.3 L124.4 12.3 L123.3 11.5 L125.3 19.0 L124.0 18.1 L127.0 24.8 L124.7 24.6 L129.5 20.3 L127.4 20.9 L130.7 15.5 L128.9 16.1 L132.2 11.0 L135.6 16.1 L133.8 15.5 L137.1 20.9 L135.0 20.3 L139.8 24.6 L136.1 25.0 L140.3 19.4 L138.5 20.1 L141.4 13.9 L139.8 14.6 L142.7 8.7 L145.5 14.6 L144.0 13.9 L146.9 20.1 L145.0 19.4 L149.2 25.0 L147.6 22.7 L151.6 18.2 L149.9 19.0 L152.6 11.6 L151.1 12.4 L153.8 5.4 L156.5 12.4 L155.0 11.6 L157.7 19.0 L156.0 18.2 L160.0 22.7 L157.4 25.0 L161.8 16.2 L159.9 17.2 L162.9 7.9 L161.2 8.9 L164.2 0.1 L167.2 8.9 L165.6 7.9 L168.5 17.2 L166.6 16.2 L171.0 25.0 L166.2 22.6 L170.0 18.1 L168.3 19.0 L170.9 11.5 L169.5 12.3 L172.1 5.3 L174.7 12.3 L173.3 11.5 L175.8 19.0 L174.2 18.1 L177.9 22.6 L174.6 22.7 L177.8 21.5 L176.4 22.0 L178.6 17.7 L177.4 18.2 L179.6 14.1 L181.9 18.2 L180.7 17.7 L182.9 22.0 L181.5 21.5 L184.7 22.7 L182.9 23.7 L186.1 20.7 L184.7 21.3 L186.9 16.2 L185.7 16.8 L187.8 12.0 L190.0 16.8 L188.8 16.2 L191.0 21.3 L189.6 20.7 L192.8 23.7 L191.4 24.1 L194.4 19.5 L193.1 20.2 L195.2 14.0 L194.0 14.7 L196.1 8.8 L198.2 14.7 L197.1 14.0 L199.2 20.2 L197.9 19.5 L200.9 24.1 L199.6 23.3 L204.3 16.9 L202.2 17.9 L205.5 9.3 L203.7 10.3 L206.9 2.2 L210.2 10.3 L208.4 9.3 L211.7 17.9 L209.6 16.9 L214.3 23.3 L209.8 25.4 L213.5 16.8 L211.9 17.8 L214.4 9.1 L213.0 10.1 L215.6 1.9 L218.1 10.1 L216.7 9.1 L219.3 17.8 L217.7 16.8 L221.3 25.4 L216.8 23.2 L220.0 20.8 L218.6 21.3 L220.9 16.4 L219.6 17.0 L221.9 12.3 L224.1 17.0 L222.9 16.4 L225.2 21.3 L223.7 20.8 L227.0 23.2 L224.1 22.5 L228.3 20.6 L226.5 21.2 L229.4 16.1 L227.8 16.6 L230.7 11.8 L233.6 16.6 L232.0 16.1 L234.9 21.2 L233.1 20.6 L237.3 22.5 L233.3 25.4 L237.0 18.8 L235.4 19.5 L237.9 12.7 L236.5 13.4 L239.1 6.9 L241.6 13.4 L240.2 12.7 L242.8 19.5 L241.1 18.8 L244.9 25.4 L242.4 24.5 L246.5 18.4 L244.7 19.2 L247.5 12.1 L246.0 12.9 L248.7 6.1 L251.5 12.9 L250.0 12.1 L252.8 19.2 L251.0 18.4 L255.1 24.5 L249.6 25.1 L254.5 17.5 L252.4 18.4 L255.7 10.3 L253.9 11.2 L257.3 3.5 L260.6 11.2 L258.8 10.3 L262.2 18.4 L260.0 17.5 L264.9 25.1 L262.3 22.8 L266.1 19.8 L264.4 20.4 L267.0 14.5 L265.6 15.2 L268.2 9.6 L270.8 15.2 L269.3 14.5 L271.9 20.4 L270.3 19.8 L274.0 22.8 L271.4 23.1 L274.4 21.8 L273.1 22.2 L275.1 18.2 L274.0 18.7 L276.1 14.9 L278.2 18.7 L277.0 18.2 L279.1 22.2 L277.8 21.8 L280.8 23.1 L277.1 22.5 L280.7 21.9 L279.1 22.3 L281.6 18.4 L280.3 18.8 L282.8 15.2 L285.3 18.8 L283.9 18.4 L286.4 22.3 L284.8 21.9 L288.5 22.5 L284.0 22.6 L287.1 20.0 L285.7 20.6 L287.8 14.9 L286.7 15.6 L288.8 10.2 L290.9 15.6 L289.8 14.9 L291.9 20.6 L290.6 20.0 L293.7 22.6 L292.3 23.3 L296.5 21.3 L294.7 21.8 L297.6 17.3 L296.0 17.8 L298.9 13.6 L301.8 17.8 L300.2 17.3 L303.2 21.8 L301.3 21.3 L305.6 23.3 L301.2 25.0 L304.9 21.5 L303.3 21.9 L305.8 17.6 L304.4 18.1 L307.0 14.0 L309.5 18.1 L308.1 17.6 L310.7 21.9 L309.1 21.5 L312.7 25.0 L311.6 22.8 L315.5 19.3 L313.8 20.0 L316.5 13.6 L315.0 14.3 L317.7 8.3 L320.4 14.3 L318.9 13.6 L321.6 20.0 L319.9 19.3 L323.8 22.8 L318.7 25.0 L322.4 20.6 L320.8 21.2 L323.3 16.0 L321.9 16.6 L324.4 11.8 L327.0 16.6 L325.6 16.0 L328.1 21.2 L326.5 20.6 L330.1 25.0 L325.7 24.1 L328.6 16.4 L327.3 17.4 L329.3 8.3 L328.2 9.4 L330.2 0.8 L332.3 9.4 L331.2 8.3 L333.2 17.4 L331.9 16.4 L334.8 24.1 L331.2 24.1 L335.3 22.0 L333.5 22.5 L336.3 18.7 L334.8 19.1 L337.6 15.6 L340.4 19.1 L338.9 18.7 L341.7 22.5 L339.9 22.0 L344.0 24.1 L342.6 23.3 L347.4 18.0 L345.3 18.8 L348.6 11.2 L346.8 12.0 L350.1 4.9 L353.4 12.0 L351.6 11.2 L354.9 18.8 L352.8 18.0 L357.6 23.3 L352.8 24.1 L356.1 17.5 L354.6 18.4 L356.9 10.4 L355.6 11.2 L357.9 3.6 L360.1 11.2 L358.9 10.4 L361.1 18.4 L359.7 17.5 L363.0 24.1 L361.2 24.9 L364.8 20.8 L363.2 21.4 L365.7 16.5 L364.3 17.0 L366.8 12.4 L369.3 17.0 L368.0 16.5 L370.4 21.4 L368.9 20.8 L372.5 24.9 L371.3 25.0 L376.1 17.3 L374.0 18.2 L377.3 10.0 L375.5 10.9 L378.8 3.1 L382.1 10.9 L380.3 10.0 L383.6 18.2 L381.5 17.3 L386.3 25.0 L383.4 23.6 L386.8 19.1 L385.3 19.8 L387.6 13.2 L386.4 13.9 L388.7 7.7 L391.0 13.9 L389.7 13.2 L392.1 19.8 L390.6 19.1 L394.0 23.6 L389.3 23.3 L392.3 20.5 L391.0 21.1 L393.0 15.9 L391.9 16.4 L393.9 11.5 L395.9 16.4 L394.8 15.9 L396.9 21.1 L395.6 20.5 L398.5 23.3 L396.6 25.3 L400.0 19.5 L399.4 20.2 L400.0 14.0 L400.0 14.7 L400.0 8.8 L400.0 14.7 L400.0 14.0 L400.0 20.2 L400.0 19.5 L400.0 25.3 L400.0 24.0 L400.0 30.0 Z"/></svg></div>
+  <main class="wrap">
+    <nav class="cats" id="cats" aria-label="Бўлимлар"></nav>
+    <div class="promos" id="promos">
+      <button class="promo reg" id="promoReg">
+        <b>15% гача кешбэк</b>
+        <span>Бепул рўйхатдан ўтинг — ҳар харидда пул қайтади</span>
+        <em>Батафсил</em>
+        <svg class="art" viewBox="0 0 100 100" aria-hidden="true"><path d="M94 18C70 30 52 46 40 70" stroke="#1C1206" stroke-opacity=".25" stroke-width="3" fill="none" stroke-linecap="round"/><g fill="#B84E00" fill-opacity=".5"><circle cx="78" cy="30" r="8"/><circle cx="64" cy="40" r="9"/><circle cx="82" cy="47" r="8.5"/><circle cx="56" cy="56" r="8"/><circle cx="70" cy="60" r="9.5"/><circle cx="48" cy="72" r="8"/><circle cx="62" cy="77" r="8.5"/><circle cx="86" cy="64" r="7.5"/></g><g fill="#fff" fill-opacity=".45"><circle cx="75" cy="27" r="2"/><circle cx="61" cy="37" r="2.2"/><circle cx="67" cy="57" r="2.3"/><circle cx="45" cy="69" r="2"/></g></svg>
+      </button>
+      <div class="promo ship">
+        <b>Бепул етказиш</b>
+        <span>Тошкентда 300 000 сўмдан, вилоятларга 700 000 сўмдан</span>
+        <svg class="art" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="#14687A" stroke-opacity=".35" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 38h44v34H14z"/><path d="M58 50h16l12 12v10H58"/><circle cx="30" cy="76" r="7"/><circle cx="74" cy="76" r="7"/></svg>
+      </div>
     </div>
-    <div class="chips" id="cats" role="toolbar" aria-label="Бўлимлар"></div>
-    <div class="chips series" id="series" role="toolbar" aria-label="Сериялар" hidden></div>
-    <div class="grid" id="grid"></div>
-    <p class="empty" id="empty" hidden>Ҳеч нарса топилмади. Бошқа сўз билан қидириб кўринг.</p>
+    <div class="chips" id="series" role="toolbar" aria-label="Сериялар" hidden></div>
+    <div id="content"></div>
     <footer id="foot"></footer>
-  </section>
+  </main>
+</section>
 
-  <section class="view cart" id="cart">
-    <h2>Сават</h2>
-    <div id="lines"></div>
-    <div class="seg" role="group" aria-label="Етказиб бериш">
-      <button id="rT" aria-pressed="true">Тошкент</button>
-      <button id="rR" aria-pressed="false">Вилоят</button>
+<section class="view" id="cart">
+  <header class="band">
+    <div class="in">
+      <button class="back" id="backBtn" aria-label="Орқага" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="titles">
+        <h1>Сават</h1>
+        <p id="cartSub"></p>
+      </div>
     </div>
-    <p class="note" id="dnote"></p>
-    <div class="sum" id="sum"></div>
-    <div class="cb" id="cb"></div>
-    <p class="note">Буюртмадан кейин консультант боғланиб, нарх ва етказишни тасдиқлайди.</p>
-  </section>
-</div>
+  </header>
+  <div class="taiga" aria-hidden="true"><svg viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0.0 30.0 L0.0 24.0 L0.0 24.5 L3.6 21.3 L2.0 21.8 L4.5 17.3 L3.2 17.8 L5.6 13.6 L8.1 17.8 L6.8 17.3 L9.2 21.8 L7.7 21.3 L11.3 24.5 L6.5 22.7 L10.6 20.0 L8.8 20.6 L11.6 14.9 L10.1 15.5 L12.9 10.1 L15.7 15.5 L14.1 14.9 L16.9 20.6 L15.2 20.0 L19.2 22.7 L15.8 22.7 L18.7 19.6 L17.4 20.2 L19.5 14.1 L18.4 14.8 L20.4 9.1 L22.4 14.8 L21.3 14.1 L23.4 20.2 L22.1 19.6 L25.0 22.7 L21.1 22.9 L25.0 17.2 L23.3 18.1 L25.9 9.7 L24.5 10.7 L27.1 2.8 L29.8 10.7 L28.3 9.7 L31.0 18.1 L29.3 17.2 L33.1 22.9 L28.7 24.2 L33.0 16.4 L31.1 17.4 L34.0 8.4 L32.4 9.4 L35.4 0.8 L38.3 9.4 L36.7 8.4 L39.6 17.4 L37.8 16.4 L42.1 24.2 L37.9 25.1 L43.0 21.9 L40.7 22.3 L44.2 18.5 L42.3 18.9 L45.8 15.3 L49.3 18.9 L47.4 18.5 L50.9 22.3 L48.7 21.9 L53.7 25.1 L48.2 23.4 L51.4 21.5 L50.0 22.0 L52.2 17.7 L51.0 18.2 L53.2 14.1 L55.4 18.2 L54.2 17.7 L56.4 22.0 L55.0 21.5 L58.2 23.4 L56.6 24.4 L59.9 18.7 L58.4 19.4 L60.7 12.5 L59.4 13.3 L61.7 6.7 L64.0 13.3 L62.7 12.5 L65.0 19.4 L63.6 18.7 L66.8 24.4 L63.6 22.7 L67.7 21.8 L65.9 22.3 L68.7 18.3 L67.1 18.7 L70.0 15.0 L72.8 18.7 L71.3 18.3 L74.1 22.3 L72.3 21.8 L76.4 22.7 L71.5 23.4 L75.9 19.6 L74.0 20.3 L77.0 14.2 L75.4 14.9 L78.4 9.2 L81.4 14.9 L79.8 14.2 L82.8 20.3 L80.9 19.6 L85.3 23.4 L81.9 24.9 L85.8 20.4 L84.1 21.0 L86.8 15.6 L85.3 16.2 L88.0 11.2 L90.7 16.2 L89.2 15.6 L91.9 21.0 L90.2 20.4 L94.1 24.9 L91.6 24.1 L95.0 18.7 L93.5 19.5 L95.9 12.6 L94.6 13.3 L97.0 6.8 L99.3 13.3 L98.0 12.6 L100.4 19.5 L98.9 18.7 L102.3 24.1 L100.8 25.4 L105.3 20.4 L103.3 21.0 L106.4 15.8 L104.7 16.4 L107.8 11.4 L110.9 16.4 L109.2 15.8 L112.3 21.0 L110.4 20.4 L114.9 25.4 L109.1 23.0 L112.9 17.6 L111.3 18.5 L113.9 10.5 L112.5 11.4 L115.1 3.9 L117.7 11.4 L116.3 10.5 L118.9 18.5 L117.2 17.6 L121.0 23.0 L117.7 24.8 L120.7 18.1 L119.4 19.0 L121.4 11.5 L120.3 12.3 L122.4 5.3 L124.4 12.3 L123.3 11.5 L125.3 19.0 L124.0 18.1 L127.0 24.8 L124.7 24.6 L129.5 20.3 L127.4 20.9 L130.7 15.5 L128.9 16.1 L132.2 11.0 L135.6 16.1 L133.8 15.5 L137.1 20.9 L135.0 20.3 L139.8 24.6 L136.1 25.0 L140.3 19.4 L138.5 20.1 L141.4 13.9 L139.8 14.6 L142.7 8.7 L145.5 14.6 L144.0 13.9 L146.9 20.1 L145.0 19.4 L149.2 25.0 L147.6 22.7 L151.6 18.2 L149.9 19.0 L152.6 11.6 L151.1 12.4 L153.8 5.4 L156.5 12.4 L155.0 11.6 L157.7 19.0 L156.0 18.2 L160.0 22.7 L157.4 25.0 L161.8 16.2 L159.9 17.2 L162.9 7.9 L161.2 8.9 L164.2 0.1 L167.2 8.9 L165.6 7.9 L168.5 17.2 L166.6 16.2 L171.0 25.0 L166.2 22.6 L170.0 18.1 L168.3 19.0 L170.9 11.5 L169.5 12.3 L172.1 5.3 L174.7 12.3 L173.3 11.5 L175.8 19.0 L174.2 18.1 L177.9 22.6 L174.6 22.7 L177.8 21.5 L176.4 22.0 L178.6 17.7 L177.4 18.2 L179.6 14.1 L181.9 18.2 L180.7 17.7 L182.9 22.0 L181.5 21.5 L184.7 22.7 L182.9 23.7 L186.1 20.7 L184.7 21.3 L186.9 16.2 L185.7 16.8 L187.8 12.0 L190.0 16.8 L188.8 16.2 L191.0 21.3 L189.6 20.7 L192.8 23.7 L191.4 24.1 L194.4 19.5 L193.1 20.2 L195.2 14.0 L194.0 14.7 L196.1 8.8 L198.2 14.7 L197.1 14.0 L199.2 20.2 L197.9 19.5 L200.9 24.1 L199.6 23.3 L204.3 16.9 L202.2 17.9 L205.5 9.3 L203.7 10.3 L206.9 2.2 L210.2 10.3 L208.4 9.3 L211.7 17.9 L209.6 16.9 L214.3 23.3 L209.8 25.4 L213.5 16.8 L211.9 17.8 L214.4 9.1 L213.0 10.1 L215.6 1.9 L218.1 10.1 L216.7 9.1 L219.3 17.8 L217.7 16.8 L221.3 25.4 L216.8 23.2 L220.0 20.8 L218.6 21.3 L220.9 16.4 L219.6 17.0 L221.9 12.3 L224.1 17.0 L222.9 16.4 L225.2 21.3 L223.7 20.8 L227.0 23.2 L224.1 22.5 L228.3 20.6 L226.5 21.2 L229.4 16.1 L227.8 16.6 L230.7 11.8 L233.6 16.6 L232.0 16.1 L234.9 21.2 L233.1 20.6 L237.3 22.5 L233.3 25.4 L237.0 18.8 L235.4 19.5 L237.9 12.7 L236.5 13.4 L239.1 6.9 L241.6 13.4 L240.2 12.7 L242.8 19.5 L241.1 18.8 L244.9 25.4 L242.4 24.5 L246.5 18.4 L244.7 19.2 L247.5 12.1 L246.0 12.9 L248.7 6.1 L251.5 12.9 L250.0 12.1 L252.8 19.2 L251.0 18.4 L255.1 24.5 L249.6 25.1 L254.5 17.5 L252.4 18.4 L255.7 10.3 L253.9 11.2 L257.3 3.5 L260.6 11.2 L258.8 10.3 L262.2 18.4 L260.0 17.5 L264.9 25.1 L262.3 22.8 L266.1 19.8 L264.4 20.4 L267.0 14.5 L265.6 15.2 L268.2 9.6 L270.8 15.2 L269.3 14.5 L271.9 20.4 L270.3 19.8 L274.0 22.8 L271.4 23.1 L274.4 21.8 L273.1 22.2 L275.1 18.2 L274.0 18.7 L276.1 14.9 L278.2 18.7 L277.0 18.2 L279.1 22.2 L277.8 21.8 L280.8 23.1 L277.1 22.5 L280.7 21.9 L279.1 22.3 L281.6 18.4 L280.3 18.8 L282.8 15.2 L285.3 18.8 L283.9 18.4 L286.4 22.3 L284.8 21.9 L288.5 22.5 L284.0 22.6 L287.1 20.0 L285.7 20.6 L287.8 14.9 L286.7 15.6 L288.8 10.2 L290.9 15.6 L289.8 14.9 L291.9 20.6 L290.6 20.0 L293.7 22.6 L292.3 23.3 L296.5 21.3 L294.7 21.8 L297.6 17.3 L296.0 17.8 L298.9 13.6 L301.8 17.8 L300.2 17.3 L303.2 21.8 L301.3 21.3 L305.6 23.3 L301.2 25.0 L304.9 21.5 L303.3 21.9 L305.8 17.6 L304.4 18.1 L307.0 14.0 L309.5 18.1 L308.1 17.6 L310.7 21.9 L309.1 21.5 L312.7 25.0 L311.6 22.8 L315.5 19.3 L313.8 20.0 L316.5 13.6 L315.0 14.3 L317.7 8.3 L320.4 14.3 L318.9 13.6 L321.6 20.0 L319.9 19.3 L323.8 22.8 L318.7 25.0 L322.4 20.6 L320.8 21.2 L323.3 16.0 L321.9 16.6 L324.4 11.8 L327.0 16.6 L325.6 16.0 L328.1 21.2 L326.5 20.6 L330.1 25.0 L325.7 24.1 L328.6 16.4 L327.3 17.4 L329.3 8.3 L328.2 9.4 L330.2 0.8 L332.3 9.4 L331.2 8.3 L333.2 17.4 L331.9 16.4 L334.8 24.1 L331.2 24.1 L335.3 22.0 L333.5 22.5 L336.3 18.7 L334.8 19.1 L337.6 15.6 L340.4 19.1 L338.9 18.7 L341.7 22.5 L339.9 22.0 L344.0 24.1 L342.6 23.3 L347.4 18.0 L345.3 18.8 L348.6 11.2 L346.8 12.0 L350.1 4.9 L353.4 12.0 L351.6 11.2 L354.9 18.8 L352.8 18.0 L357.6 23.3 L352.8 24.1 L356.1 17.5 L354.6 18.4 L356.9 10.4 L355.6 11.2 L357.9 3.6 L360.1 11.2 L358.9 10.4 L361.1 18.4 L359.7 17.5 L363.0 24.1 L361.2 24.9 L364.8 20.8 L363.2 21.4 L365.7 16.5 L364.3 17.0 L366.8 12.4 L369.3 17.0 L368.0 16.5 L370.4 21.4 L368.9 20.8 L372.5 24.9 L371.3 25.0 L376.1 17.3 L374.0 18.2 L377.3 10.0 L375.5 10.9 L378.8 3.1 L382.1 10.9 L380.3 10.0 L383.6 18.2 L381.5 17.3 L386.3 25.0 L383.4 23.6 L386.8 19.1 L385.3 19.8 L387.6 13.2 L386.4 13.9 L388.7 7.7 L391.0 13.9 L389.7 13.2 L392.1 19.8 L390.6 19.1 L394.0 23.6 L389.3 23.3 L392.3 20.5 L391.0 21.1 L393.0 15.9 L391.9 16.4 L393.9 11.5 L395.9 16.4 L394.8 15.9 L396.9 21.1 L395.6 20.5 L398.5 23.3 L396.6 25.3 L400.0 19.5 L399.4 20.2 L400.0 14.0 L400.0 14.7 L400.0 8.8 L400.0 14.7 L400.0 14.0 L400.0 20.2 L400.0 19.5 L400.0 25.3 L400.0 24.0 L400.0 30.0 Z"/></svg></div>
+  <main class="wrap">
+    <div class="list" id="lines"></div>
+    <div id="cartPanels">
+      <div class="panel">
+        <h3>Етказиб бериш</h3>
+        <div class="seg" role="group" aria-label="Етказиб бериш">
+          <button id="rT" aria-pressed="true">Тошкент</button>
+          <button id="rR" aria-pressed="false">Вилоят</button>
+        </div>
+        <p class="note" id="dnote"></p>
+      </div>
+      <div class="panel sum" id="sum"></div>
+      <div class="panel cb" id="cb"></div>
+      <div class="panel regcta" id="regcta">
+        <p>Рўйхатдан ўтмаганмисиз? Бепул рўйхатдан ўтинг, кешбэк ҳисобингизга тушади.</p>
+        <button id="regBtn">Рўйхатдан ўтиш</button>
+      </div>
+      <p class="note" style="margin:12px 18px 0">Буюртмадан кейин консультант боғланиб, нарх ва етказишни тасдиқлайди.</p>
+    </div>
+  </main>
+</section>
 
 <div class="bar" id="bar" hidden><button id="barBtn"></button></div>
 <div class="sheet-bg" id="sheetBg"><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
-<div class="toast" id="toast" role="status"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 const tg = window.Telegram && window.Telegram.WebApp;
 const inTg = !!(tg && tg.platform && tg.platform !== "unknown");
 const canSend = inTg && !(tg.initDataUnsafe && tg.initDataUnsafe.query_id);
 const params = new URLSearchParams(location.search);
-const REF = params.get("ref") || "";
+const DEFAULT_REF = "https://uz.siberianhealth.com/ru/shop/user/registration/PRIVILEGED_CLIENT/?referral=2626230330";
+const REF = safeRef(params.get("ref"));
 const CAT_ORDER = ["health", "beauty", "parfum", "sport", "other"];
 const DELIVERY = {tashkent: {free: 300000, fee: 20000}, region: {free: 700000, fee: 30000}};
 const LEVELS = [[30, 5], [50, 10], [100, 15]];
-const ICONS = {
-  health: '<path d="M12 21c0-6 0-9 0-11"/><path d="M12 13c-4.5 0-7-3-7-8 4.5 0 7 3 7 8Z"/><path d="M12 10c0-4 2.5-6.5 7-6.5 0 4.5-2.5 7-7 6.5Z"/>',
-  beauty: '<path d="M12 3c3.5 4.2 6 7.6 6 11a6 6 0 0 1-12 0c0-3.4 2.5-6.8 6-11Z"/><path d="M9.5 15.5a2.6 2.6 0 0 0 2.5 2.4"/>',
-  parfum: '<rect x="6" y="9" width="12" height="12" rx="3"/><path d="M10 9V6h4v3"/><path d="M9 4h6"/><path d="M9.5 14.5h5"/>',
-  sport: '<path d="M13 3 6 13.5h5L10 21l8-11h-5.2L13 3Z"/>',
-  other: '<path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/>',
-  capsule: '<rect x="3.5" y="9" width="17" height="6" rx="3" transform="rotate(-45 12 12)"/><path d="m9.2 9.2 5.6 5.6"/>',
-  cup: '<path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V9Z"/><path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M9 3c-1 1.2 1 2 0 3.5M12.5 3c-1 1.2 1 2 0 3.5"/>',
-  box: '<path d="m4 8 8-4 8 4v8l-8 4-8-4V8Z"/><path d="m4 8 8 4 8-4M12 12v8"/>',
-  tube: '<path d="M8 3h8v3l-1 1v12a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V7L8 6V3Z"/><path d="M10 11h4"/>',
-  bottle: '<path d="M10 3h4v3l2 2v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l2-2V3Z"/><path d="M8 12h8"/>',
-  jar: '<rect x="5" y="9" width="14" height="11" rx="3"/><path d="M6 9V6.5A1.5 1.5 0 0 1 7.5 5h9A1.5 1.5 0 0 1 18 6.5V9"/>',
-  dropper: '<path d="M9 3h6M12 3v3"/><path d="M9.5 6h5l-.5 4h-4l-.5-4Z"/><path d="M10 10h4v8a2 2 0 0 1-4 0v-8Z"/>',
-  shaker: '<path d="M7 8h10l-1.2 12H8.2L7 8Z"/><path d="M8 4h8v4H8z"/><path d="M7.6 13h8.8"/>',
-  bar: '<rect x="3" y="8" width="18" height="8" rx="2"/><path d="M8 8v8M13 8v8"/>',
-  gift: '<rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11"/><path d="M12 9c-2-4-6-3-4.5-.5M12 9c2-4 6-3 4.5-.5"/>'
-};
-const FORMS = [
-  [/набор|\bset\b/, "gift"], [/чай|\btea\b/, "cup"], [/\bbox\b|бокс/, "box"], [/батончик|мыло/, "bar"],
-  [/зубная паста|паста|гель интимный|бальзам для губ|крем для рук|део-гель/, "tube"],
-  [/шампун|кондиционер|для душа|для умывания|тоник|мицеллярн|ополаскиват|масло|сироп|флюид|молочко|пенка|эмульсия|дезодорант|пудра/, "bottle"],
-  [/сыворотк|эссенц|концентрат|эпам/, "dropper"], [/крем|бальзам|маска|скраб|баттер|пилинг|гель/, "jar"],
-  [/протеин|коктейль|напиток|bcaa|карнитин|шейкер/, "shaker"], [/парфюм|духи/, "parfum"],
-  [/трав|botanic|мака|женьшень|гинкго|валериан|пустырник|ортилия|горечей|грибов/, "health"]
-];
-const DEFAULT_FORM = {health: "capsule", beauty: "beauty", parfum: "parfum", sport: "sport", other: "other"};
-function form(p) { const n = (p.name + " " + (p.series || "")).toLowerCase(); const f = FORMS.find(([re]) => re.test(n)); return f ? f[1] : DEFAULT_FORM[p.category] || "other"; }
-function hue(s) { let h = 0; for (const ch of String(s)) h = (h * 31 + ch.charCodeAt(0)) | 0; return (Math.abs(h) % 29) - 14; }
+const HOME_PER_CAT = 6;
+const BAIKAL = "#0C4A57";
+
+function safeRef(value) {
+  try {
+    const u = new URL(value || "");
+    if (u.protocol === "https:" && /(^|\.)siberianhealth\.com$/.test(u.hostname)) return u.href;
+  } catch (e) {}
+  return DEFAULT_REF;
+}
+
 let DATA = null, CATS = {}, byId = {};
 let state = {cat: "all", series: "", q: "", view: "catalog", region: "tashkent"};
 let cart = {};
 try { cart = JSON.parse(localStorage.getItem("sw_cart_v1") || "{}") || {}; } catch (e) { cart = {}; }
 
 const $ = s => document.querySelector(s);
-const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const money = n => new Intl.NumberFormat("ru-RU").format(Math.round(n)).replace(/ /g, " ");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const money = n => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 const pts = n => String(Math.round(n * 10) / 10).replace(".", ",");
-const icon = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[k] || ICONS.other}</svg>`;
-const vars = c => `--c:var(--${c});--soft:var(--${c}-soft)`;
+const ICON = {
+  plus: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
+  minus: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg>',
+  bag: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>',
+  gift: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-2-4-6-3-4.5-.5M12 9c2-4 6-3 4.5-.5"/></svg>'
+};
 function haptic(kind) { try { tg && tg.HapticFeedback && tg.HapticFeedback.impactOccurred(kind || "light"); } catch (e) {} }
 function save() { try { localStorage.setItem("sw_cart_v1", JSON.stringify(cart)); } catch (e) {} }
-function toast(t) { const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2200); }
+function toast(t) { const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2600); }
+function openRef() { haptic("light"); if (inTg) tg.openLink(REF); else window.open(REF, "_blank", "noopener"); }
+const img = (src, big) => {
+  if (!src) return "";
+  const large = big ? src.replace("_fit_300_300.", "_fit_600_600.") : src;
+  const back = large !== src ? ` data-fallback="${esc(src)}"` : "";
+  return `<img src="${esc(large)}"${back} alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`;
+};
+
+function setDark(on) { document.documentElement.classList.toggle("dark", !!on); paintTelegram(); }
+function paintTelegram() {
+  if (!inTg) return;
+  const dark = document.documentElement.classList.contains("dark");
+  try { if (tg.isVersionAtLeast && tg.isVersionAtLeast("6.1")) { tg.setHeaderColor(dark ? "#0A3A44" : BAIKAL); tg.setBackgroundColor(dark ? "#0C1618" : "#EEF4F5"); } } catch (e) {}
+  try { if (tg.isVersionAtLeast && tg.isVersionAtLeast("7.10")) tg.setBottomBarColor(dark ? "#0C1618" : "#EEF4F5"); } catch (e) {}
+}
 
 function init() {
   if (inTg) {
     tg.ready(); tg.expand();
-    document.documentElement.classList.toggle("dark", tg.colorScheme === "dark");
-    tg.onEvent("themeChanged", () => document.documentElement.classList.toggle("dark", tg.colorScheme === "dark"));
+    setDark(tg.colorScheme === "dark");
+    tg.onEvent("themeChanged", () => setDark(tg.colorScheme === "dark"));
     tg.MainButton.onClick(mainAction);
-    tg.BackButton.onClick(() => show("catalog"));
+    tg.BackButton.onClick(goBack);
+  } else {
+    const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq) { setDark(mq.matches); mq.addEventListener && mq.addEventListener("change", e => setDark(e.matches)); }
+    $("#backBtn").hidden = false;
   }
-  if (REF) { $("#promo").hidden = false; $("#promoBtn").onclick = () => inTg ? tg.openLink(REF) : window.open(REF, "_blank"); }
+  $("#content").innerHTML = `<div class="grid">${Array.from({length: 4}, () => '<div class="card skel"><div class="ph"></div><div class="sk"></div><div class="sk" style="width:60%"></div></div>').join("")}</div>`;
   fetch("products.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
     DATA = d; CATS = d.categories || {};
     d.products.forEach(p => byId[p.id] = p);
     Object.keys(cart).forEach(id => { if (!byId[id]) delete cart[id]; });
     const date = (d.updated || "").split("-").reverse().join(".");
-    $("#sub").textContent = `${d.products.length} та маҳсулот. Нархлар ${date} ҳолатига.`;
-    $("#foot").textContent = `Мустақил консультант каталоги. Нархлар Siberian Wellness Ўзбекистон прайс-листидан олинган (${date}), ўзгариши мумкин.`;
+    $("#sub").textContent = `${d.products.length} та маҳсулот · нархлар ${date} ҳолатига`;
+    $("#foot").textContent = `Мустақил консультант каталоги. Нархлар Siberian Wellness Ўзбекистон прайс-листидан олинган (${date}), ўзгариши мумкин. Расмлар — uz.siberianhealth.com сайтидан.`;
     renderCats(); render(); updateMain();
-  }).catch(() => { $("#sub").textContent = "Каталогни юклаб бўлмади. Интернетни текшириб, қайта очинг."; });
+  }).catch(() => { $("#sub").textContent = "Каталогни юклаб бўлмади"; $("#content").innerHTML = '<p class="empty">Интернетни текшириб, каталогни қайта очинг.</p>'; });
 }
 
-function list() {
-  const q = state.q.trim().toLowerCase();
-  return DATA.products.filter(p =>
-    (state.cat === "all" || p.category === state.cat) &&
-    (!state.series || p.series === state.series) &&
-    (!q || p.name.toLowerCase().includes(q) || String(p.id).toLowerCase().includes(q) || (p.series || "").toLowerCase().includes(q)));
-}
+function inCat(c) { return DATA.products.filter(p => p.category === c); }
+function coverOf(c) { const p = inCat(c).find(x => x.photo); return p ? p.photo : ""; }
 
 function renderCats() {
-  const count = c => DATA.products.filter(p => p.category === c).length;
-  const chips = [`<button class="chip" data-cat="all" aria-pressed="${state.cat === "all"}"><i></i>Ҳаммаси <small>${DATA.products.length}</small></button>`]
-    .concat(CAT_ORDER.filter(c => CATS[c] && count(c)).map(c =>
-      `<button class="chip" data-cat="${c}" style="${vars(c)}" aria-pressed="${state.cat === c}"><i></i>${esc(CATS[c])} <small>${count(c)}</small></button>`));
-  $("#cats").innerHTML = chips.join("");
+  const present = CAT_ORDER.filter(c => CATS[c] && inCat(c).length);
+  const all = `<button class="cat" data-cat="all" aria-pressed="${state.cat === "all"}"><span class="ring"><span class="disc all">${present.slice(0, 4).map(c => img(coverOf(c))).join("")}</span></span><span class="lbl">Ҳаммаси</span></button>`;
+  $("#cats").innerHTML = all + present.map(c =>
+    `<button class="cat" data-cat="${c}" aria-pressed="${state.cat === c}"><span class="ring"><span class="disc">${img(coverOf(c))}</span></span><span class="lbl">${esc(CATS[c])}</span></button>`).join("");
   const box = $("#series");
-  if (state.cat === "all") { box.hidden = true; box.innerHTML = ""; return; }
-  const names = [...new Set(DATA.products.filter(p => p.category === state.cat).map(p => p.series).filter(Boolean))];
+  const names = state.cat === "all" || state.q.trim() ? [] : [...new Set(inCat(state.cat).map(p => p.series).filter(Boolean))];
   box.hidden = names.length < 2;
-  box.innerHTML = [`<button class="chip" data-series="" aria-pressed="${!state.series}">Барча сериялар</button>`]
+  box.innerHTML = names.length < 2 ? "" : [`<button class="chip" data-series="" aria-pressed="${!state.series}">Барчаси</button>`]
     .concat(names.map(s => `<button class="chip" data-series="${esc(s)}" aria-pressed="${state.series === s}">${esc(s)}</button>`)).join("");
 }
 
-function control(p) {
+function control(p, big) {
   const n = cart[p.id] || 0;
-  if (!n) return `<button class="add" data-add="${esc(p.id)}" aria-label="Саватга қўшиш"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>`;
-  return `<div class="step"><button data-dec="${esc(p.id)}" aria-label="Камайтириш"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button><b>${n}</b><button data-add="${esc(p.id)}" aria-label="Кўпайтириш"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button></div>`;
+  if (!n) return `<button class="buy" data-add="${esc(p.id)}">${ICON.bag}${big ? "Саватга қўшиш" : "Саватга"}</button>`;
+  return `<div class="qty"><button data-dec="${esc(p.id)}" aria-label="Камайтириш">${ICON.minus}</button><b>${n}</b><button data-add="${esc(p.id)}" aria-label="Кўпайтириш">${ICON.plus}</button></div>`;
 }
 
-function tile(p) {
-  const media = p.photo ? `<img src="${esc(p.photo)}" alt="" loading="lazy">` : `<span class="ser">${esc(p.series || "")}</span>${icon(form(p))}`;
-  return `<button class="label" style="${vars(p.category)};--h:${hue(p.series)}deg" data-open="${esc(p.id)}" aria-label="${esc(p.name)}">${media}</button>`;
+function card(p) {
+  return `<article class="card">
+    <button class="ph${p.photo ? "" : " noimg"}" data-open="${esc(p.id)}" aria-label="${esc(p.name)}">${img(p.photo)}<span class="pts">${pts(p.points)} балл</span></button>
+    <div class="body">
+      <div class="price">${money(p.price)} <small>сўм</small></div>
+      <button class="name" data-open="${esc(p.id)}">${esc(p.name)}</button>
+      <div class="ctl" data-ctl="${esc(p.id)}">${control(p)}</div>
+    </div></article>`;
+}
+
+function matches(p, q) {
+  return p.name.toLowerCase().includes(q) || String(p.id).toLowerCase().includes(q) || (p.series || "").toLowerCase().includes(q);
 }
 
 function render() {
   if (!DATA) return;
-  const items = list();
-  $("#grid").innerHTML = items.map(p => `<article class="card">${tile(p)}
-    <button class="name" data-open="${esc(p.id)}">${esc(p.name)}</button>
-    <div class="row"><div><div class="price">${money(p.price)} <span>сўм</span></div><span class="pts">${pts(p.points)} балл</span></div><span data-ctl="${esc(p.id)}">${control(p)}</span></div></article>`).join("");
-  $("#empty").hidden = items.length > 0;
+  const q = state.q.trim().toLowerCase();
+  let html = "";
+  if (q) {
+    const items = DATA.products.filter(p => matches(p, q));
+    html = `<div class="sec"><h2>Қидирув<small>${items.length} та</small></h2></div>` +
+      (items.length ? `<div class="grid">${items.map(card).join("")}</div>` : `<p class="empty">«${esc(state.q.trim())}» бўйича ҳеч нарса топилмади. Бошқа сўз ёки маҳсулот кодини ёзиб кўринг.</p>`);
+  } else if (state.cat === "all") {
+    html = CAT_ORDER.filter(c => CATS[c] && inCat(c).length).map(c => {
+      const items = inCat(c);
+      const more = items.length > HOME_PER_CAT ? `<button class="more" data-cat="${c}">Ҳаммаси ${items.length}</button>` : "";
+      return `<div class="sec"><h2>${esc(CATS[c])}</h2>${more}</div><div class="grid">${items.slice(0, HOME_PER_CAT).map(card).join("")}</div>`;
+    }).join("");
+  } else {
+    const items = inCat(state.cat).filter(p => !state.series || p.series === state.series);
+    html = `<div class="sec"><h2>${esc(state.series || CATS[state.cat])}<small>${items.length} та</small></h2></div><div class="grid">${items.map(card).join("")}</div>`;
+  }
+  $("#content").innerHTML = html;
+  $("#promos").hidden = !!q || state.cat !== "all";
 }
 
 function refreshControls(id) {
-  document.querySelectorAll(`[data-ctl="${CSS.escape(id)}"]`).forEach(el => el.innerHTML = control(byId[id]));
+  document.querySelectorAll(`[data-ctl="${CSS.escape(id)}"]`).forEach(el => el.innerHTML = control(byId[id], el.dataset.big === "1"));
 }
 
 function change(id, d) {
+  if (!byId[id]) return;
   const n = Math.max(0, Math.min(99, (cart[id] || 0) + d));
   if (n) cart[id] = n; else delete cart[id];
   save(); haptic(d > 0 ? "light" : "soft");
   refreshControls(id);
+  if (d > 0) { const b = $("#cartBtn"); b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); }
   if (state.view === "cart") renderCart();
-  if ($("#sheetBg").classList.contains("on") && $("#sheet").dataset.id === id) openSheet(id);
   updateMain();
 }
 
@@ -291,32 +428,32 @@ function totals() {
 }
 
 function renderCart() {
-  const ids = Object.keys(cart);
+  const ids = Object.keys(cart).filter(id => byId[id]);
+  const t = totals();
+  $("#cartSub").textContent = t.count ? `${t.count} та маҳсулот` : "Ҳали бўш";
+  $("#cartPanels").hidden = !ids.length;
   if (!ids.length) {
-    $("#lines").innerHTML = '<p class="empty">Сават бўш. Каталогдан маҳсулот қўшинг.</p>';
-    $("#sum").innerHTML = ""; $("#cb").hidden = true; $("#dnote").textContent = ""; return;
+    $("#lines").innerHTML = '<p class="empty">Сават бўш. Каталогдан маҳсулот танланг.</p>';
+    return;
   }
   $("#lines").innerHTML = ids.map(id => { const p = byId[id];
-    return `<div class="line" style="${vars(p.category)}"><span class="dot">${icon(form(p))}</span>
-      <div class="info"><p>${esc(p.name)}</p><small>${money(p.price)} сўм, ${pts(p.points)} балл</small></div>
-      <span data-ctl="${esc(id)}">${control(p)}</span></div>`; }).join("");
-  const t = totals();
-  $("#dnote").textContent = t.delivery ? `Бепул етказишгача яна ${money(t.toFree)} сўм.` : "Етказиш бепул.";
-  $("#sum").innerHTML = `<div><span>Маҳсулотлар (${t.count} та)</span><span>${money(t.sum)} сўм</span></div>
+    return `<div class="line"><span class="thumb${p.photo ? "" : " noimg"}">${img(p.photo)}</span>
+      <div class="info"><p>${esc(p.name)}</p><b>${money(p.price * cart[id])} сўм</b><small>${money(p.price)} сўм · ${pts(p.points)} балл</small></div>
+      <div data-ctl="${esc(id)}">${control(p)}</div></div>`; }).join("");
+  $("#dnote").textContent = t.delivery ? `Бепул етказишгача яна ${money(t.toFree)} сўмлик маҳсулот қўшинг.` : "Бу буюртма учун етказиш бепул.";
+  $("#sum").innerHTML = `<div><span>Маҳсулотлар, ${t.count} та</span><span>${money(t.sum)} сўм</span></div>
     <div><span>Етказиш</span><span>${t.delivery ? money(t.delivery) + " сўм" : "бепул"}</span></div>
     <div class="total"><span>Жами</span><span>${money(t.total)} сўм</span></div>`;
   const level = LEVELS.filter(([p]) => t.points >= p).pop();
   const next = LEVELS.find(([p]) => t.points < p);
-  const pct = Math.min(100, t.points);
-  $("#cb").hidden = false;
-  $("#cb").innerHTML = `<p>Саватда <b>${pts(t.points)} балл</b>. ${level ? `Рўйхатдан ўтган мижоз бундай харид учун <b>${level[1]}% кешбэк</b> олади.` : "30 баллдан бошлаб рўйхатдан ўтган мижоз кешбэк олади."}
-    ${next ? `${next[1]}% учун яна ${pts(next[0] - t.points)} балл.` : ""}</p>
-    <div class="meter" aria-hidden="true"><i style="width:${pct}%"></i><b style="left:30%"></b><b style="left:50%"></b></div>
+  $("#cb").innerHTML = `<p>Бу харид <b>${pts(t.points)} балл</b>. ${level ? `Рўйхатдан ўтган мижоз бунинг учун <b>${level[1]}% кешбэк</b> олади.` : "Ойлик харид 30 баллдан ошса, рўйхатдан ўтган мижоз кешбэк олади."}${next ? ` ${next[1]}% учун яна ${pts(next[0] - t.points)} балл.` : ""}</p>
+    <div class="meter" aria-hidden="true"><i style="width:${Math.min(100, t.points)}%"></i><s style="left:30%"></s><s style="left:50%"></s></div>
     <div class="ticks" aria-hidden="true"><span style="left:30%">5%</span><span style="left:50%">10%</span><span>15%</span></div>`;
 }
 
 function show(view) {
   state.view = view;
+  $("#sheetBg").classList.remove("on");
   $("#catalog").classList.toggle("on", view === "catalog");
   $("#cart").classList.toggle("on", view === "cart");
   if (view === "cart") renderCart();
@@ -325,13 +462,20 @@ function show(view) {
   updateMain();
 }
 
+function goBack() {
+  if ($("#sheetBg").classList.contains("on")) { closeSheet(); return; }
+  show("catalog");
+}
+
 function updateMain() {
   const t = totals();
+  const badge = $("#cartCount");
+  badge.hidden = !t.count; badge.textContent = t.count > 99 ? "99+" : t.count;
   let text = "", visible = false;
-  if (state.view === "catalog" && t.count) { text = `Сават: ${t.count} та, ${money(t.sum)} сўм`; visible = true; }
+  if (state.view === "catalog" && t.count) { text = `Сават · ${t.count} та · ${money(t.sum)} сўм`; visible = true; }
   if (state.view === "cart" && t.count) { text = `Буюртма бериш · ${money(t.total)} сўм`; visible = true; }
   if (inTg) {
-    if (visible) { tg.MainButton.setParams({text, color: "#1f4d3a", text_color: "#ffffff", is_visible: true, is_active: true}); }
+    if (visible) tg.MainButton.setParams({text, color: BAIKAL, text_color: "#ffffff", is_visible: true, is_active: true});
     else tg.MainButton.hide();
   } else {
     $("#bar").hidden = !visible; $("#barBtn").textContent = text;
@@ -340,7 +484,7 @@ function updateMain() {
 
 function mainAction() {
   if (state.view === "catalog") { show("cart"); return; }
-  const items = Object.entries(cart).map(([id, n]) => [id, n]);
+  const items = Object.entries(cart).filter(([id]) => byId[id]).map(([id, n]) => [id, n]);
   if (!items.length) return;
   if (!canSend) { toast("Буюртма бериш учун каталогни ботдаги «Каталог» тугмасидан очинг."); return; }
   const payload = JSON.stringify({t: "order", r: state.region, items});
@@ -348,30 +492,63 @@ function mainAction() {
   tg.sendData(payload);
 }
 
-function openSheet(id) {
-  const p = byId[id]; if (!p) return;
-  const sheet = $("#sheet"); sheet.dataset.id = id;
-  sheet.innerHTML = `<div class="grab"></div>${tile(p).replace("data-open", "data-x")}
-    <h3>${esc(p.name)}</h3><p class="meta">${esc(p.series || "")}${p.series ? ", " : ""}код ${esc(p.id)}</p>
-    <div class="row"><div><div class="price">${money(p.price)} <span>сўм</span></div><span class="pts">${pts(p.points)} балл</span></div><span data-ctl="${esc(p.id)}">${control(p)}</span></div>
-    <div class="btns">${canSend ? `<button class="ghost" data-ask="${esc(p.id)}">Консультантдан сўраш</button>` : ""}<button class="primary" data-close>${cart[id] ? "Тайёр" : "Саватга қўшиш"}</button></div>`;
-  sheet.querySelector("[data-close]").onclick = () => { if (!cart[id]) change(id, 1); closeSheet(); };
-  const ask = sheet.querySelector("[data-ask]");
-  if (ask) ask.onclick = () => tg.sendData(JSON.stringify({t: "ask", id}));
+function openSheet(html, id) {
+  const sheet = $("#sheet");
+  sheet.dataset.id = id || "";
+  sheet.innerHTML = `<div class="grab"></div>${html}`;
   $("#sheetBg").classList.add("on");
+  sheet.scrollTop = 0;
+  if (inTg) tg.BackButton.show();
 }
-function closeSheet() { $("#sheetBg").classList.remove("on"); }
+
+function openProduct(id) {
+  const p = byId[id]; if (!p) return;
+  const nextLevel = LEVELS[LEVELS.length - 1][1];
+  openSheet(`<div class="hero${p.photo ? "" : " noimg"}">${img(p.photo, true)}</div>
+    <h3>${esc(p.name)}</h3>
+    <p class="meta">${p.series ? esc(p.series) + " · " : ""}код ${esc(p.id)}</p>
+    <div class="prow"><div class="price">${money(p.price)} <small>сўм</small></div><span class="pts">${pts(p.points)} балл</span></div>
+    <button class="hint" data-ref>${ICON.gift}<span>Рўйхатдан ўтган мижоз ойлик харидига ${nextLevel}% гача кешбэк олади. <u>Рўйхатдан ўтиш</u></span></button>
+    <div class="btns"><div data-ctl="${esc(p.id)}" data-big="1">${control(p, true)}</div>${canSend ? `<button class="ghost" data-ask="${esc(p.id)}">Консультантдан сўраш</button>` : ""}</div>`, id);
+}
+
+function openCashback() {
+  openSheet(`<h3 style="margin-top:4px">Кешбэк қандай ишлайди</h3>
+    <p class="meta" style="margin-bottom:14px">Рўйхатдан ўтиш бепул, ҳеч қандай мажбурият йўқ.</p>
+    <ol class="steps"><li>Шу ҳавола орқали бепул рўйхатдан ўтинг.</li><li>Маҳсулотларни шу ерда ёки Buy Siberian иловасида буюртма қилинг.</li><li>Ой давомидаги харидларингиз баллари жамланади ва пулнинг бир қисми ҳисобингизга қайтади.</li></ol>
+    <div class="lv">${LEVELS.map(([p, c]) => `<div><b>${c}%</b><span>${p} баллдан</span></div>`).join("")}</div>
+    <div class="btns"><button class="buy" data-ref>Бепул рўйхатдан ўтиш</button></div>`, "");
+}
+
+function closeSheet() {
+  $("#sheetBg").classList.remove("on");
+  if (inTg && state.view !== "cart") tg.BackButton.hide();
+}
 
 document.addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
-  if (b.dataset.cat) { state.cat = b.dataset.cat; state.series = ""; renderCats(); render(); window.scrollTo({top: 0}); return; }
+  if (b.dataset.cat) { state.cat = b.dataset.cat; state.series = ""; clearSearch(); haptic("light"); renderCats(); render(); window.scrollTo({top: 0}); return; }
   if ("series" in b.dataset) { state.series = b.dataset.series; renderCats(); render(); return; }
-  if (b.dataset.add) { e.stopPropagation(); change(b.dataset.add, 1); return; }
-  if (b.dataset.dec) { e.stopPropagation(); change(b.dataset.dec, -1); return; }
-  if (b.dataset.open) { openSheet(b.dataset.open); return; }
+  if (b.dataset.add) { change(b.dataset.add, 1); return; }
+  if (b.dataset.dec) { change(b.dataset.dec, -1); return; }
+  if (b.dataset.open) { openProduct(b.dataset.open); return; }
+  if ("ref" in b.dataset) { openRef(); return; }
+  if (b.dataset.ask) { tg.sendData(JSON.stringify({t: "ask", id: b.dataset.ask})); return; }
 });
+document.addEventListener("error", e => {
+  const el = e.target;
+  if (!el || el.tagName !== "IMG") return;
+  if (el.dataset.fallback) { const src = el.dataset.fallback; delete el.dataset.fallback; el.src = src; return; }
+  const box = el.parentElement; el.remove(); if (box && !box.querySelector("img")) box.classList.add("noimg");
+}, true);
 $("#sheetBg").addEventListener("click", e => { if (e.target.id === "sheetBg") closeSheet(); });
-$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+function clearSearch() { state.q = ""; $("#q").value = ""; $("#qClear").hidden = true; }
+$("#q").addEventListener("input", e => { state.q = e.target.value; $("#qClear").hidden = !state.q; renderCats(); render(); });
+$("#qClear").addEventListener("click", () => { clearSearch(); renderCats(); render(); $("#q").focus(); });
+$("#cartBtn").addEventListener("click", () => show("cart"));
+$("#backBtn").addEventListener("click", goBack);
+$("#promoReg").addEventListener("click", openCashback);
+$("#regBtn").addEventListener("click", openRef);
 $("#barBtn").addEventListener("click", mainAction);
 $("#rT").onclick = () => { state.region = "tashkent"; $("#rT").setAttribute("aria-pressed", "true"); $("#rR").setAttribute("aria-pressed", "false"); renderCart(); updateMain(); };
 $("#rR").onclick = () => { state.region = "region"; $("#rR").setAttribute("aria-pressed", "true"); $("#rT").setAttribute("aria-pressed", "false"); renderCart(); updateMain(); };
