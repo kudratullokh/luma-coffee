@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uz-Cyrl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Бот коди — Cloudflare учун</title>
+<style>
+:root{color-scheme:light dark}
+body{margin:0;padding:20px;background:#EEF4F5;color:#0C1618;font:17px/1.5 -apple-system,system-ui,sans-serif}
+main{max-width:480px;margin:0 auto}
+h1{font-size:24px;line-height:1.2;margin:8px 0 6px}
+p{margin:0 0 14px}
+button{display:block;width:100%;padding:18px;border:0;border-radius:16px;background:#0C4A57;color:#fff;font:inherit;font-size:19px;font-weight:700}
+button:disabled{opacity:.5}
+button:focus-visible{outline:3px solid #F0A04B;outline-offset:3px}
+#info{min-height:1.5em;margin:12px 0 18px;font-weight:600}
+.ok{color:#14682E}.bad{color:#B3261E}
+details{margin-top:8px}
+textarea{box-sizing:border-box;width:100%;height:180px;margin-top:8px;font:12px/1.4 ui-monospace,Menlo,monospace;border-radius:12px;border:1px solid #9BB3B8;padding:10px}
+@media (prefers-color-scheme:dark){body{background:#0C1618;color:#E6EEF0}textarea{background:#14262A;color:#E6EEF0;border-color:#2F4A50}.ok{color:#7DD99A}.bad{color:#FF8A80}}
+</style>
+</head>
+<body>
+<main>
+<h1>Бот коди — Cloudflare учун</h1>
+<p>Тугмани босинг, кейин Cloudflare'даги «Edit code» ойнасига қайтиб, эски кодни ўчиринг ва <b>Paste</b> қилинг.</p>
+<button id="copy" disabled>Код юкланяпти…</button>
+<p id="info" role="status" aria-live="polite"></p>
+<details>
+<summary>Тугма ишламаса</summary>
+<p>Пастдаги матнни босиб туринг → <b>Select All</b> → <b>Copy</b>.</p>
+<textarea id="code" readonly></textarea>
+</details>
+</main>
+<script>
+const btn = document.getElementById("copy");
+const info = document.getElementById("info");
+const area = document.getElementById("code");
+let code = "";
+function done() {
+  info.className = "ok";
+  info.textContent = "✅ Нусхаланди. Энди Cloudflare'га қайтиб, Paste қилинг.";
+}
+fetch("worker.js?" + Date.now(), {cache: "no-store"}).then(r => {
+  if (!r.ok) throw new Error(r.status);
+  return r.text();
+}).then(text => {
+  code = text;
+  area.value = text;
+  btn.disabled = false;
+  btn.textContent = "📋 Кодни нусхалаш";
+  info.textContent = "Код тайёр (" + Math.round(text.length / 1024) + " КБ).";
+}).catch(() => {
+  info.className = "bad";
+  info.textContent = "Кодни юклаб бўлмади. Интернетни текшириб, саҳифани янгиланг.";
+});
+btn.addEventListener("click", () => {
+  const fallback = () => {
+    area.closest("details").open = true;
+    area.focus();
+    area.setSelectionRange(0, code.length);
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    if (ok) done();
+    else { info.className = "bad"; info.textContent = "Нусхалаб бўлмади: пастдаги матнни белгилаб, Copy қилинг."; }
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(done, fallback);
+  else fallback();
+});
+</script>
+</body>
+</html>
