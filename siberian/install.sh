@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Siberian Wellness боти: серверга доимий хизмат (systemd) сифатида ўрнатиш ёки янгилаш.
 #
-# Ишлатиш (Ubuntu 22.04/24.04 ёки Debian 12, root сифатида):
+# Ишлатиш (Ubuntu 22.04/24.04 ёки Debian 12/13, root сифатида; Google Cloud'да — startup script ичида):
 #   curl -fsSL https://kudratullokh.github.io/luma-coffee/siberian/install.sh | bash -s -- БОТ_ТОКЕНИ SETUP_КОДИ
 #
 # Бот кейин ўзи ишлайди: сервер қайта ёқилса ёки бот тўхтаб қолса, ўзи қайта ишга тушади,
@@ -18,6 +18,13 @@ FILES="bot.py texts.py storage.py products.json defaults.env"
 TEST="${SIBERIAN_TEST:-}"  # синов учун: apt, фойдаланувчи ва systemd қадамларисиз
 
 say() { printf '\n\033[1m%s\033[0m\n' "$*"; }
+apt_retry() {  # янги серверда биринчи дақиқаларда тизим ўзи янгиланаётган бўлади — тугашини кутамиз
+  for _ in $(seq 1 20); do
+    apt-get -o DPkg::Lock::Timeout=120 "$@" && return 0
+    sleep 15
+  done
+  return 1
+}
 die() { printf '\n\033[31m%s\033[0m\n' "$*" >&2; exit 1; }
 
 [ -n "$TEST" ] || [ "$(id -u)" -eq 0 ] || die "Root сифатида ишга туширинг (ёки буйруқдаги bash олдига sudo қўшинг)."
@@ -31,8 +38,9 @@ if [ -z "$TEST" ]; then
   command -v apt-get >/dev/null || die "Бу скрипт Ubuntu ёки Debian учун. Серверга Ubuntu 22.04/24.04 ўрнатинг."
   say "1/5 Керакли дастурлар ўрнатиляпти..."
   export DEBIAN_FRONTEND=noninteractive
-  apt-get update -qq
-  apt-get install -y -qq python3 python3-venv curl ca-certificates tar >/dev/null
+  apt_retry update -qq || die "Дастурлар рўйхатини янгилаб бўлмади. Бир оздан кейин қайта уриниб кўринг."
+  apt_retry install -y -qq python3 python3-venv curl ca-certificates tar >/dev/null \
+    || die "Керакли дастурларни ўрнатиб бўлмади. Бир оздан кейин қайта уриниб кўринг."
 fi
 python3 -c 'import sys; sys.exit(sys.version_info < (3, 9))' \
   || die "Python 3.9 ёки янгиси керак: серверга Ubuntu 22.04/24.04 ёки Debian 12 ўрнатинг."
@@ -55,7 +63,7 @@ tar -xzf "$tmp/bot.tar.gz" -C "$DIR" --no-same-owner $FILES
 
 say "3/5 Python кутубхонаси ўрнатиляпти (1–2 дақиқа)..."
 [ -x "$DIR/venv/bin/python" ] || python3 -m venv "$DIR/venv"
-"$DIR/venv/bin/pip" install -q --disable-pip-version-check --upgrade "aiogram>=3.15,<4"
+"$DIR/venv/bin/pip" install -q --no-cache-dir --disable-pip-version-check --upgrade "aiogram>=3.15,<4"
 
 say "4/5 Созламалар ёзиляпти..."
 ENV_FILE="$DIR/.env"
