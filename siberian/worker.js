@@ -9,11 +9,12 @@
 // Ихтиёрий созламалар: MANAGERS_CHAT_ID, CONSULTANT_NAME, WORK_HOURS, CATALOG_URL, CLIENT_REF_LINK,
 // BUSINESS_REF_LINK, APP_STORE_URL, GOOGLE_PLAY_URL, ENABLE_ORDERS (1/0).
 // AI ёрдамчи (ихтиёрий, бепул): Settings → Bindings → Add → Workers AI, Variable name: AI.
-//   Созламалар: AI_ENABLED (1/0), AI_MODEL, AI_DAILY_LIMIT (кунига жавоблар, 100), AI_USER_LIMIT (бир мижозга, 20),
+//   Созламалар: AI_ENABLED (1/0), AI_MODEL, AI_MODEL_FALLBACK (биринчиси ишламаса; 0 — йўқ),
+//   AI_DAILY_LIMIT (кунига жавоблар, 100), AI_USER_LIMIT (бир мижозга, 20),
 //   AI_TO_GROUP (1/0 — савол-жавобни группага ҳам юбориш), PRODUCT_PAGE_URL ({id} ўрнига маҳсулот коди; 0 — ўчириш).
 
 const TEXTS = {"OZ":{"BTN_PRODUCTS":"Маҳсулотлар","BTN_CATALOG":"Каталог","BTN_DISCOUNT":"Кешбэк билан харид","BTN_ORDER":"Буюртма бериш","BTN_DELIVERY":"Етказиб бериш","BTN_BUSINESS":"Бизнес имконияти","BTN_CONSULTANT":"Консультант","BTN_LANG":"🌐 Тил · Язык","BTN_SEND_PHONE":"Рақамимни юбориш","BTN_SKIP":"Ўтказиб юбориш","BTN_YES":"Ҳа","BTN_NO":"Йўқ","CMD_START":"Бош меню","CMD_LANG":"Тилни ўзгартириш","LANG_SAVED":"Тайёр, энди ўзбекча гаплашамиз.","CATEGORIES":{"health":"Саломатлик","beauty":"Гўзаллик","parfum":"Парфюм","sport":"Спорт","other":"Бошқа"},"WELCOME":"Ассалому алайкум! Мен {name} — Siberian Wellness'нинг мустақил консультантиман.\nМаҳсулот танлашга ёрдам бераман ва кешбэк билан харид қилишни кўрсатаман. Нимадан бошлаймиз?","WELCOME_ANON":"Ассалому алайкум! Мен Siberian Wellness маҳсулотлари бўйича мустақил консультантман.\nМаҳсулот танлашга ёрдам бераман ва кешбэк билан харид қилишни кўрсатаман. Нимадан бошлаймиз?","CHOOSE_CATEGORY":"Қайси бўлим қизиқтиради?","HEALTH_NOTE":"Бу маҳсулотлар дори эмас. Касаллигингиз бўлса, шифокор билан маслаҳатлашинг.","CATEGORY_EMPTY":"Бу бўлимга маҳсулотлар тез орада қўшилади. Саволингиз бўлса, «Консультант» тугмасини босинг.","PRODUCT_CARD":"<b>{name}</b>\n{description}\n\nНарх: {price}\nБалл: {points}","CATEGORY_MORE":"Бу бўлимда яна {count} та маҳсулот бор.","CATEGORY_MORE_APP":"Бу бўлимда яна {count} та маҳсулот бор — ҳаммаси пастдаги «Каталог» тугмасида.","BTN_MORE":"Яна {count} та кўрсатиш","BTN_BUY_WITH_DISCOUNT":"Кешбэк билан олиш","BTN_HELP_CHOOSE":"Менга мосини танланг","CURRENCY":"сўм","HOURS":"соат {start}–{end} оралиғида","HOURS_ANY":"иш вақтида","DISCOUNT_INFO":"Рўйхатдан ўтиш бепул. Ойлик харидингиз 30 баллдан ошса 5%, 50 баллдан — 10%, 100 баллдан — 15% кешбэк оласиз.","DISCOUNT_STEPS":"1) «Рўйхатдан ўтиш» тугмасини босиб, маълумотларингизни киритинг.\n2) Кейин «Рўйхатдан ўтдим» тугмасини босинг.","REF_LINK_MISSING":"Рўйхатдан ўтиш ҳаволаси ҳали қўшилмаган. «Консультант» тугмасини босиб ёзинг — ёрдам берамиз.","BTN_REGISTER":"Рўйхатдан ўтиш","BTN_REGISTERED":"Рўйхатдан ўтдим","REGISTERED":"Табриклайман! Энди Buy Siberian иловасини юклаб, шу логин билан киринг. Иловани App Store ёки Google Play'дан «Buy Siberian» деб топасиз.\nБиринчи буюртмада ёрдам берамиз.","ASK_PHONE":"Консультант сиз билан боғланиши учун телефон рақамингизни юборинг (пастдаги тугма).","ASK_PHONE_AGAIN":"Пастдаги «Рақамимни юбориш» тугмасини босинг ёки рақамни +998... шаклида ёзинг.","THANKS_MENU":"Раҳмат! Бош меню пастда.","ASK_REMINDERS":"Ойида бир марта харид ҳақида эслатиб турайми?","REMINDERS_ON":"Яхши, ойида бир марта эслатаман.","REMINDERS_OFF":"Хўп, эслатма юборилмайди.","DELIVERY":"<b>Етказиб бериш</b>\nТошкент: 300 000 сўмдан бепул, камроқ бўлса 20 000 сўм.\nВилоятлар: 700 000 сўмдан бепул, камроқ бўлса 30 000 сўм.","BUSINESS":"Бизнес-партнёр ўз харидидан ва мижозлари харидидан кешбэк олади, жамоа ўсса — гуруҳ бонуси ҳам.\nДаромад сотув ҳажмига боғлиқ ва кафолатланмайди.","BTN_BIZ_TALK":"Батафсил суҳбат","BTN_BIZ_JOIN":"Партнёр бўламан","BIZ_TALK_ASK":"Исмингиз ва қулай вақтни ёзинг — маркетинг режани батафсил тушунтираман.","BIZ_TALK_DONE":"Раҳмат! Тез орада боғланаман.","BIZ_JOIN":"Бизнес-партнёр бўлиб рўйхатдан ўтиш учун тугмани босинг. Рўйхатдан ўтгач, бошланғич қўлланмани юбораман.","BIZ_JOIN_NO_LINK":"Ҳавола тез орада қўшилади — консультант ўзи боғланади.","BTN_BIZ_REGISTER":"Партнёр бўлиб рўйхатдан ўтиш","CONSULTANT_ASK":"Саволингизни ёзинг, {hours} жавоб берамиз.","ASK_ABOUT_PRODUCT":"«{product}» ҳақида саволингизни ёзинг, {hours} жавоб берамиз.","QUESTION_SENT":"Саволингиз консультантга юборилди. Жавоб шу ерга келади.","TEXT_PLEASE":"Илтимос, матн билан ёзинг.","ORDER_ASK_ITEMS":"Қайси маҳсулотлар ва нечтадан керак? Ёзиб юборинг.","ORDER_ASK_PHONE":"Телефон рақамингизни юборинг (пастдаги тугма).","ORDER_ASK_ADDRESS":"Етказиб бериш манзилини ёзинг: шаҳар ёки туман, кўча, уй.","ORDER_ASK_PAYMENT":"Қандай тўлайсиз?","PAYMENTS":{"click":"Click","payme":"Payme","cash":"Нақд"},"REGIONS":{"tashkent":"Тошкент","region":"вилоят"},"APP_ORDER_SUMMARY":"<b>Буюртмангиз:</b>\n{lines}\n\nМаҳсулотлар: {total} сўм, {points} балл\nЕтказиш ({region}): {delivery}\n<b>Жами: {grand} сўм</b>","APP_ORDER_LINE":"{name} × {qty} — {sum} сўм","APP_DELIVERY_FREE":"бепул","APP_ORDER_EMPTY":"Сават бўш экан. Каталогдан маҳсулот танланг.","ORDER_DONE":"Буюртмангиз қабул қилинди. Менежер тез орада боғланиб, нарх ва етказишни тасдиқлайди.","REMINDER":"Ассалому алайкум! Бу ойги харидингизни қилдингизми? Кетма-кет харидлар совға беради. Ёрдам керак бўлса, пастдаги тугмани босинг.","SOURCE_DIRECT":"тўғридан-тўғри","USER_LINE":"<a href=\"tg://user?id={user_id}\">{name}</a> {username}\nТел: {phone} · Манба: {source}","GROUP_REGISTERED":"<b>Янги мижоз рўйхатдан ўтди</b>\n{user}","GROUP_BIZ_TALK":"<b>Бизнес бўйича суҳбат сўради</b>\n{user}\nХабари: {text}","GROUP_BIZ_JOIN":"<b>Партнёр бўлиш ҳаволасини олди</b>\n{user}","GROUP_QUESTION":"<b>Савол</b>\n{user}","GROUP_ABOUT_PRODUCT":"Маҳсулот: {product}","GROUP_ORDER":"<b>Янги буюртма</b>\n{user}\nМаҳсулотлар:\n{items}\nМанзил: {address}\nТўлов: {payment}","APP_GROUP_TOTAL":"Жами: {grand} сўм ({points} балл), етказиш ({region}): {delivery}","GROUP_REPLY_HINT":"Жавоб бериш учун шу хабарга Reply қилиб ёзинг.","GROUP_LATE":"<i>Группа уланмаган пайтда келган ({when}):</i>","GROUP_QUESTION_TEXT":"Саволи: {text}","SETGROUP_FLUSHED":"Группа уланмаган пайтда келган {count} та ариза шу ерга юборилди.","STATS_PENDING":"<b>Группага етказилмаган: {count} та</b> — группа уланганда юборилади.","GROUP_REPLY_SENT":"Юборилди.","GROUP_USER_BLOCKED":"Юборилмади: мижоз ботни блоклаган.","CHAT_ID":"Бу чатнинг ID рақами: <code>{chat_id}</code>\nМенежерлар группаси бўлса, уни .env даги MANAGERS_CHAT_ID га ёзинг.","SETGROUP_DONE":"Шу группа менежерлар группаси бўлди. Энди буюртма ва саволлар шу ерга келади.\nГруппа ID: <code>{chat_id}</code>","SETGROUP_WRONG":"Код нотўғри.","GROUP_HELLO":"Салом! Буюртма ва саволлар шу группага келиши учун бу ерга /setgroup КОД деб ёзинг.\nЁки менга шахсий чатда /setgroup КОД деб ёзиб, шу группани танланг — бу доим ишлайди.","GROUP_ADMIN_OK":"Раҳмат, энди мен админман. Бу группани менежерлар группаси қилиш учун /setgroup КОД деб ёзинг.","SETGROUP_PRIVATE":"Группани улаш учун шу ерга /setgroup КОД деб ёзинг (КОД — созлашдаги SETUP_CODE).","SETGROUP_PICK":"Код тўғри. Энди пастдаги «👥 Группани танлаш» тугмасини босиб, буюртма ва саволлар келадиган группани танланг. Рўйхатда фақат бот қўшилган группалар чиқади.","SETGROUP_BTN_PICK":"👥 Группани танлаш","SETGROUP_LINKED":"Тайёр: «{title}» менежерлар группаси бўлди. Энди буюртма ва саволлар ўша ерга келади.\nГруппа ID: <code>{chat_id}</code>","SETGROUP_CANT_POST":"«{title}» группасига ёза олмадим. Ботни шу группага қўшинг ва яна /setgroup КОД деб ёзинг.","SETGROUP_AGAIN":"Группани улаш учун аввал /setgroup КОД деб ёзинг.","SETGROUP_LIMIT":"Код кўп марта нотўғри ёзилди. Бир соатдан кейин қайта уриниб кўринг.","STATS_TOTAL":"<b>Ботга кирганлар: {users} киши</b>\nБугун: {today} · Охирги 7 кунда: {week}\n«Рўйхатдан ўтдим» деганлар: {registered} · Буюртма: {orders} · Бизнес: {business} · Савол: {questions}","STATS_SINCE":"<i>Ҳисоб {since} дан бери юритиляпти.</i>","STATS_TITLE":"Манба бўйича (қаердан келгани)","STATS_PRIVATE_HINT":"Статистика менежерлар группасида: /stats деб ёзинг.\nШу ерда кўриш учун: /stats КОД (КОД — группани улашда ёзилган рақам).","STATS_LINE":"{source} — {users} киши: {registered} рўйхат, {orders} буюртма, {business} бизнес, {questions} савол","STATS_EMPTY":"Ҳали ҳеч ким келмаган.","REMINDERS_SENT":"Эслатма юборилди: {sent} та ({total} тадан).","PRODUCTS_RELOADED":"Маҳсулотлар янгиланди: {count} та.","PRODUCTS_ERROR":"products.json да хато бор, эски рўйхат қолди: {error}"},"RU":{"BTN_PRODUCTS":"Продукция","BTN_CATALOG":"Каталог","BTN_DISCOUNT":"Покупка с кэшбэком","BTN_ORDER":"Оформить заказ","BTN_DELIVERY":"Доставка","BTN_BUSINESS":"Бизнес-возможность","BTN_CONSULTANT":"Консультант","BTN_LANG":"🌐 Язык · Til","BTN_SEND_PHONE":"Отправить мой номер","BTN_SKIP":"Пропустить","BTN_YES":"Да","BTN_NO":"Нет","CMD_START":"Главное меню","CMD_LANG":"Сменить язык","LANG_SAVED":"Готово, теперь общаемся на русском.","CATEGORIES":{"health":"Здоровье","beauty":"Красота","parfum":"Парфюмерия","sport":"Спорт","other":"Другое"},"WELCOME":"Здравствуйте! Я {name} — независимый консультант Siberian Wellness.\nПомогу выбрать продукцию и покажу, как покупать с кэшбэком. С чего начнём?","WELCOME_ANON":"Здравствуйте! Я независимый консультант по продукции Siberian Wellness.\nПомогу выбрать продукцию и покажу, как покупать с кэшбэком. С чего начнём?","CHOOSE_CATEGORY":"Какой раздел вас интересует?","HEALTH_NOTE":"Эта продукция не является лекарством. Если у вас есть заболевание, посоветуйтесь с врачом.","CATEGORY_EMPTY":"Товары в этот раздел скоро добавим. Если есть вопрос, нажмите «Консультант».","PRODUCT_CARD":"<b>{name}</b>\n{description}\n\nЦена: {price}\nБаллы: {points}","CATEGORY_MORE":"В этом разделе есть ещё товары: {count}.","CATEGORY_MORE_APP":"В этом разделе есть ещё товары: {count}. Все они — в кнопке «Каталог» внизу.","BTN_MORE":"Показать ещё {count}","BTN_BUY_WITH_DISCOUNT":"Купить с кэшбэком","BTN_HELP_CHOOSE":"Подберите мне","CURRENCY":"сум","HOURS":"с {start} до {end}","HOURS_ANY":"в рабочее время","DISCOUNT_INFO":"Регистрация бесплатная. Если покупки за месяц превысят 30 баллов, вы получаете кэшбэк 5%, от 50 баллов — 10%, от 100 баллов — 15%.","DISCOUNT_STEPS":"1) Нажмите «Зарегистрироваться» и заполните данные.\n2) Затем нажмите «Я зарегистрировался».","REF_LINK_MISSING":"Ссылку для регистрации ещё не добавили. Нажмите «Консультант» и напишите — поможем.","BTN_REGISTER":"Зарегистрироваться","BTN_REGISTERED":"Я зарегистрировался","REGISTERED":"Поздравляю! Теперь скачайте приложение Buy Siberian и войдите с этим логином. Оно есть в App Store и Google Play по запросу «Buy Siberian».\nС первым заказом поможем.","ASK_PHONE":"Отправьте номер телефона, чтобы консультант мог с вами связаться (кнопка внизу).","ASK_PHONE_AGAIN":"Нажмите кнопку «Отправить мой номер» внизу или напишите номер в формате +998...","THANKS_MENU":"Спасибо! Главное меню — внизу.","ASK_REMINDERS":"Напоминать раз в месяц о покупке?","REMINDERS_ON":"Хорошо, буду напоминать раз в месяц.","REMINDERS_OFF":"Хорошо, напоминаний не будет.","DELIVERY":"<b>Доставка</b>\nТашкент: бесплатно от 300 000 сум, при меньшей сумме — 20 000 сум.\nРегионы: бесплатно от 700 000 сум, при меньшей сумме — 30 000 сум.","BUSINESS":"Бизнес-партнёр получает кэшбэк со своих покупок и с покупок своих клиентов, а когда команда растёт — ещё и групповой бонус.\nДоход зависит от объёма продаж и не гарантируется.","BTN_BIZ_TALK":"Подробная беседа","BTN_BIZ_JOIN":"Стать партнёром","BIZ_TALK_ASK":"Напишите ваше имя и удобное время — подробно расскажу о маркетинг-плане.","BIZ_TALK_DONE":"Спасибо! Скоро свяжусь с вами.","BIZ_JOIN":"Чтобы зарегистрироваться бизнес-партнёром, нажмите кнопку. После регистрации пришлю стартовое руководство.","BIZ_JOIN_NO_LINK":"Ссылку скоро добавим — консультант свяжется с вами сам.","BTN_BIZ_REGISTER":"Зарегистрироваться партнёром","CONSULTANT_ASK":"Напишите ваш вопрос, ответим {hours}.","ASK_ABOUT_PRODUCT":"Напишите ваш вопрос о «{product}», ответим {hours}.","QUESTION_SENT":"Ваш вопрос отправлен консультанту. Ответ придёт сюда.","TEXT_PLEASE":"Пожалуйста, напишите текстом.","ORDER_ASK_ITEMS":"Какие товары и сколько нужно? Напишите.","ORDER_ASK_PHONE":"Отправьте номер телефона (кнопка внизу).","ORDER_ASK_ADDRESS":"Напишите адрес доставки: город или район, улица, дом.","ORDER_ASK_PAYMENT":"Как будете оплачивать?","PAYMENTS":{"click":"Click","payme":"Payme","cash":"Наличными"},"REGIONS":{"tashkent":"Ташкент","region":"регион"},"APP_ORDER_SUMMARY":"<b>Ваш заказ:</b>\n{lines}\n\nТовары: {total} сум, баллы: {points}\nДоставка ({region}): {delivery}\n<b>Итого: {grand} сум</b>","APP_ORDER_LINE":"{name} × {qty} — {sum} сум","APP_DELIVERY_FREE":"бесплатно","APP_ORDER_EMPTY":"Корзина пуста. Выберите товары в каталоге.","ORDER_DONE":"Ваш заказ принят. Менеджер скоро свяжется с вами, чтобы подтвердить цену и доставку.","REMINDER":"Здравствуйте! Вы уже сделали покупку в этом месяце? Покупки месяц за месяцем приносят подарки. Если нужна помощь, нажмите кнопку ниже."}};
-const VERSION = "202611271403";
+const VERSION = "202611271447";
 
 const EXTRA_OZ = {
   REMINDERS_SENT_MORE: "Ҳаммасига бирданига юбориб бўлмайди: давом эттириш учун яна /eslatma деб ёзинг.",
@@ -27,6 +28,7 @@ const EXTRA_OZ = {
   GROUP_AI_ANSWER: "AI жавоби: {text}",
   GROUP_HUMAN: "<b>🙋 Мижоз консультант сўраяпти</b>\n{user}\nОхирги саволи: {text}",
   STATS_AI: "🤖 AI бугун {used} та жавоб берди (кунлик лимит {limit}).",
+  GROUP_AI_FAILED: "⚠️ AI жавоб бера олмади: {error}",
 };
 const EXTRA_RU = {
   AI_NOTE: "🤖 Ответ подготовил AI-помощник. Если нужно уточнить, поможет наш консультант.",
@@ -52,6 +54,7 @@ const DEFAULTS = {
   TELEGRAM_API_URL: "https://api.telegram.org",
   AI_ENABLED: "1",
   AI_MODEL: "@cf/google/gemma-4-26b-a4b-it",
+  AI_MODEL_FALLBACK: "@cf/meta/llama-4-scout-17b-16e-instruct",
   AI_DAILY_LIMIT: "100",
   AI_USER_LIMIT: "20",
   AI_TO_GROUP: "1",
@@ -81,6 +84,7 @@ function config(env) {
     ai: {
       enabled: !!env.AI && typeof env.AI.run === "function" && get("AI_ENABLED") !== "0",
       model: get("AI_MODEL"),
+      fallback: get("AI_MODEL_FALLBACK") === "0" ? "" : get("AI_MODEL_FALLBACK"),
       daily: Math.max(1, Math.trunc(Number(get("AI_DAILY_LIMIT"))) || 100),
       perUser: Math.max(1, Math.trunc(Number(get("AI_USER_LIMIT"))) || 20),
       toGroup: get("AI_TO_GROUP") !== "0",
@@ -498,13 +502,14 @@ async function finishRegistration(b, user) {
     { text: b.T("BTN_YES"), callback_data: "rem:1" }, { text: b.T("BTN_NO"), callback_data: "rem:0" }]] } });
 }
 
-async function relayQuestion(b, message, product) {
+async function relayQuestion(b, message, product, aiError = "") {
   const user = message.from;
   await b.touchUser(user);
   const body = message.text || message.caption || "";
   await b.addLead(user.id, "question", body.slice(0, 1000));
   let header = b.UZ("GROUP_QUESTION", { user: await b.describeUser(user) });
   if (product) header += "\n" + b.UZ("GROUP_ABOUT_PRODUCT", { product: esc(product) });
+  if (aiError) header += "\n" + b.UZ("GROUP_AI_FAILED", { error: esc(clip(aiError, 300)) });
   const question = esc(body || "(расм ёки файл)");
   const delivered = await b.notifyManagers(user.id, header,
     `${header}\n${b.UZ("GROUP_QUESTION_TEXT", { text: question })}`);
@@ -530,7 +535,21 @@ const AI_HISTORY_TTL = 6 * 3600_000;
 const HUMAN_WINDOW = 30 * 60_000;      // «Консультант жавоб берсин»дан кейин 30 дақиқа хабарлар тўғри одамга
 const AI_LANG_NAMES = { uz: "Uzbek in Latin script", oz: "Uzbek in Cyrillic script", ru: "Russian" };
 
-const normText = (value) => toLatin(String(value || "").toLowerCase()).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+// Қидириш учун тез нормаллаштириш: кирилл → лотин (контекстсиз), бошқа белгилар — бўшлиқ
+const FAST_LATIN = new Map(Object.entries({ "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "yo",
+  "ж": "j", "з": "z", "и": "i", "й": "y", "к": "k", "л": "l", "м": "m", "н": "n", "о": "o", "п": "p", "р": "r",
+  "с": "s", "т": "t", "у": "u", "ф": "f", "х": "x", "ц": "s", "ч": "ch", "ш": "sh", "щ": "sh", "ъ": "", "ы": "i",
+  "ь": "", "э": "e", "ю": "yu", "я": "ya", "ў": "o", "қ": "q", "ғ": "g", "ҳ": "h",
+  "ʻ": "", "ʼ": "", "'": "", "’": "", "`": "" }));
+function normText(value) {
+  let out = "";
+  for (const ch of String(value || "").toLowerCase()) {
+    const lat = FAST_LATIN.get(ch);
+    if (lat !== undefined) out += lat;
+    else out += (ch >= "a" && ch <= "z") || (ch >= "0" && ch <= "9") ? ch : " ";
+  }
+  return out.replace(/\s+/g, " ").trim();
+}
 const utcDay = (daysAgo = 0) => new Date(Date.now() - daysAgo * 86400_000).toISOString().slice(0, 10);
 const clip = (value, size) => (value.length > size ? `${value.slice(0, size)}…` : value);
 
@@ -733,17 +752,54 @@ function aiToHtml(raw) {  // AI ёзган оддий матн → Telegram HTML
 }
 const aiPlain = (raw) => raw.replace(/\*\*([^*\n]+?)\*\*/g, "$1").replace(/^#{1,6}\s*/gm, "").replace(/^[ \t]*[*-][ \t]+/gm, "• ");
 
-async function aiComplete(b, messages) {
+const shortError = (error) => String(error && error.message ? error.message : error).replace(/\s+/g, " ").slice(0, 220);
+
+function emptyReason(result) {  // бўш жавоб сабаби (масалан, токен тугаган)
+  const choice = result && Array.isArray(result.choices) ? result.choices[0] : null;
+  const bits = [];
+  if (choice && choice.finish_reason) bits.push(`finish_reason=${choice.finish_reason}`);
+  if (choice && choice.message && (choice.message.reasoning_content || choice.message.reasoning)) bits.push("фақат ўйлаш қисми");
+  if (!choice && result && typeof result === "object") bits.push(`майдонлар: ${Object.keys(result).slice(0, 6).join(",")}`);
+  return bits.length ? ` (${bits.join(", ")})` : "";
+}
+
+async function aiRun(b, model, messages, timeoutMs) {
   let timer;
   const timeout = new Promise((resolve, reject) => {
-    timer = setTimeout(() => reject(new Error("AI жавоби кечикди")), AI_TIMEOUT);
+    timer = setTimeout(() => reject(new Error(`${Math.round(timeoutMs / 1000)} сонияда жавоб келмади`)), timeoutMs);
   });
   try {
-    const result = await Promise.race([b.env.AI.run(b.cfg.ai.model, { messages, max_tokens: 1200, temperature: 0.3 }), timeout]);
-    return cleanAi(aiText(result));
+    const result = await Promise.race([b.env.AI.run(model, { messages, max_tokens: 1200, temperature: 0.3 }), timeout]);
+    const answer = cleanAi(aiText(result));
+    if (!answer) throw new Error(`бўш жавоб${emptyReason(result)}`);
+    return answer;
   } finally {
     clearTimeout(timer);
   }
+}
+
+async function noteAi(b, info) {  // охирги AI натижаси — созлаш саҳифасида кўринади
+  try { await b.setMeta("ai_last", JSON.stringify({ at: nowIso(), ...info })); } catch { /* муҳим эмас */ }
+}
+
+async function aiComplete(b, messages) {  // аввал асосий модель, ишламаса — заҳирадаги
+  const models = [b.cfg.ai.model, b.cfg.ai.fallback].filter((model, i, list) => model && list.indexOf(model) === i);
+  const started = Date.now();
+  const errors = [];
+  for (let i = 0; i < models.length; i += 1) {
+    const left = AI_TIMEOUT - (Date.now() - started);
+    if (left < 4000) break;
+    const budget = i === 0 && models.length > 1 ? Math.max(4000, Math.min(16_000, left - 9000)) : left;
+    try {
+      const answer = await aiRun(b, models[i], messages, budget);
+      await noteAi(b, { ok: true, model: models[i], ms: Date.now() - started, errors });
+      return answer;
+    } catch (error) {
+      errors.push(`${models[i].split("/").pop()}: ${shortError(error)}`);
+    }
+  }
+  await noteAi(b, { ok: false, ms: Date.now() - started, errors });
+  throw new Error(errors.join(" | ") || "AI модели кўрсатилмаган");
 }
 
 async function tryAi(b, message, product = "", productId = "") {
@@ -798,7 +854,7 @@ async function aiAnswer(b, message, question, product, productId) {
     }
   } catch (error) {
     console.error("AI ёрдамчи хатоси:", error && error.message ? error.message : error);
-    if (!sent) await relayQuestion(b, message, product || null);
+    if (!sent) await relayQuestion(b, message, product || null, shortError(error));
   }
 }
 
@@ -1442,36 +1498,101 @@ button{width:100%;margin-top:14px;padding:14px;font:inherit;font-weight:700;colo
 </style><main>${inner}</main></html>`, { headers: { "content-type": "text/html; charset=utf-8" } });
 }
 
-function statusList(env, cfg) {
+function aiStatusLine(last) {  // охирги AI натижаси (мижоз саволи ёки синов)
+  if (!last) return "";
+  const when = tashkentParts(last.at);
+  const at = `${when.day}.${when.month} ${when.hour}:${when.minute}`;
+  if (last.ok) {
+    const note = last.errors && last.errors.length ? ` — олдин: ${esc(last.errors.join(" | "))}` : "";
+    return `<li class="ok">🤖 Охирги AI жавоби: ${at}, ${esc(String(last.model || "").split("/").pop())}, ${(last.ms / 1000).toFixed(1)} с${note}</li>`;
+  }
+  return `<li class="bad">⚠️ Охирги AI хатоси (${at}): ${esc((last.errors || []).join(" | ") || "номаълум")}</li>`;
+}
+
+function statusList(env, cfg, aiLast = null) {
   const row = (ok, good, bad) => `<li class="${ok ? "ok" : "bad"}">${ok ? "✅" : "❌"} ${ok ? good : bad}</li>`;
   return `<ul>${row(!!cfg.token, "BOT_TOKEN бор", "BOT_TOKEN қўшилмаган (Settings → Variables and Secrets)")}
 ${row(!!cfg.setupCode, "SETUP_CODE бор", "SETUP_CODE қўшилмаган (Settings → Variables and Secrets)")}
 ${row(!!env.DB, "D1 база уланган (DB)", "D1 база уланмаган (Settings → Bindings → D1 database, номи DB)")}
 ${cfg.ai.enabled ? `<li class="ok">✅ AI ёрдамчи уланган (AI)</li>`
     : env.AI ? "<li>⚪ AI ёрдамчи ўчирилган (AI_ENABLED = 0)</li>"
-      : "<li>⚪ AI ёрдамчи уланмаган — ихтиёрий (Settings → Bindings → Workers AI, номи AI)</li>"}</ul>`;
+      : "<li>⚪ AI ёрдамчи уланмаган — ихтиёрий (Settings → Bindings → Workers AI, номи AI)</li>"}
+${cfg.ai.enabled ? aiStatusLine(aiLast) : ""}</ul>`;
+}
+
+async function readAiLast(env) {
+  if (!env.DB) return null;
+  try {
+    await ensureSchema(env.DB);
+    const row = await env.DB.prepare("SELECT value FROM meta WHERE key = 'ai_last'").first();
+    return row ? JSON.parse(row.value) : null;
+  } catch {
+    return null;
+  }
+}
+
+async function codeAllowed(b, form) {  // SETUP_CODE текшируви (соатига 10 та хато уриниш)
+  const now = Date.now();
+  const fails = JSON.parse((await b.meta("setup_fails")) || "[]").filter((moment) => now - moment < 3600_000);
+  if (fails.length >= 10) return "limit";
+  if (String(form.get("code") || "").trim() !== b.cfg.setupCode) {
+    fails.push(now);
+    await b.setMeta("setup_fails", JSON.stringify(fails));
+    return "bad";
+  }
+  return "ok";
+}
+
+const AI_TEST_QUESTION = "Assalomu alaykum! Menga atir kerak, nima tavsiya qilasiz?";
+
+async function aiTestPage(request, env, cfg) {  // «AI'ни синаш»: битта савол бериб, жавоб ёки хатони кўрсатади
+  if (request.method !== "POST" || !cfg.token || !cfg.setupCode || !env.DB) return Response.redirect(new URL("/", request.url), 303);
+  if (!cfg.ai.enabled) return page("AI уланмаган", `<h1 class="bad">AI уланмаган</h1>${statusList(env, cfg)}<p><a href="/">Орқага</a></p>`);
+  const b = new Bot(env, cfg);
+  await ensureSchema(b.db);
+  const check = await codeAllowed(b, await request.formData());
+  if (check === "limit") return page("Кейинроқ", `<h1 class="bad">Кўп марта нотўғри код киритилди</h1><p>Бир соатдан кейин қайта уриниб кўринг.</p>`);
+  if (check === "bad") return page("Код нотўғри", `<h1 class="bad">Код нотўғри</h1><p><a href="/">Орқага</a></p>`);
+  b.lang = "uz";
+  let products = new Map();
+  try {
+    products = await loadProducts(cfg);
+  } catch (error) {
+    console.error("Каталогни юклаб бўлмади:", error.message);
+  }
+  const started = Date.now();
+  try {
+    const answer = await aiComplete(b, [{ role: "system", content: aiSystemPrompt(b, products, null, "") },
+      { role: "user", content: AI_TEST_QUESTION }]);
+    return page("AI ишлаяпти", `<h1 class="ok">✅ AI ишлаяпти</h1><p><b>Савол:</b> ${esc(AI_TEST_QUESTION)}</p>
+<p><b>Жавоб (${((Date.now() - started) / 1000).toFixed(1)} с):</b><br>${aiToHtml(answer).replace(/\n/g, "<br>")}</p>
+${statusList(env, cfg, await readAiLast(env))}<p><a href="/">Орқага</a></p>`);
+  } catch (error) {
+    return page("AI хатоси", `<h1 class="bad">❌ AI жавоб бермади</h1><p>${esc(shortError(error))}</p>
+${statusList(env, cfg, await readAiLast(env))}<p><a href="/">Орқага</a></p>`);
+  }
 }
 
 async function setupPage(request, env, cfg) {
   const ready = cfg.token && cfg.setupCode && env.DB;
   if (request.method !== "POST") {
-    return page("Siberian бот", `<h1>Siberian бот</h1>${statusList(env, cfg)}${ready ? `
+    const aiForm = ready && cfg.ai.enabled ? `
+<form method="post" action="/ai-test"><label>AI'ни синаш учун SETUP_CODE<input name="code" inputmode="numeric" autocomplete="off" required></label>
+<button>🤖 AI'ни синаш</button></form>` : "";
+    return page("Siberian бот", `<h1>Siberian бот</h1>${statusList(env, cfg, await readAiLast(env))}${ready ? `
 <form method="post" action="/setup"><label>SETUP_CODE<input name="code" inputmode="numeric" autocomplete="off" required></label>
-<button>Ботни улаш</button></form>` : "<p>Аввал қизил белгиланганларни тўғриланг ва саҳифани янгиланг.</p>"}
+<button>Ботни улаш</button></form>` : "<p>Аввал қизил белгиланганларни тўғриланг ва саҳифани янгиланг.</p>"}${aiForm}
 <p><small>Версия ${esc(VERSION)}</small></p>`);
   }
   if (!ready) return page("Siberian бот", `<h1>Ҳали тайёр эмас</h1>${statusList(env, cfg)}`);
   const form = await request.formData();
   const b = new Bot(env, cfg);
   await ensureSchema(b.db);
-  const now = Date.now();
-  const fails = JSON.parse((await b.meta("setup_fails")) || "[]").filter((moment) => now - moment < 3600_000);
-  if (fails.length >= 10) {
+  const check = await codeAllowed(b, form);
+  if (check === "limit") {
     return page("Кейинроқ", `<h1 class="bad">Кўп марта нотўғри код киритилди</h1><p>Бир соатдан кейин қайта уриниб кўринг.</p>`);
   }
-  if (String(form.get("code") || "").trim() !== cfg.setupCode) {
-    fails.push(now);
-    await b.setMeta("setup_fails", JSON.stringify(fails));
+  if (check === "bad") {
     return page("Код нотўғри", `<h1 class="bad">Код нотўғри</h1><p>SETUP_CODE га ёзган кодингизни киритинг.</p>
 <p><a href="/">Орқага</a></p>`);
   }
@@ -1518,6 +1639,7 @@ export default {
       return new Response("ok");
     }
     if (url.pathname === "/" || url.pathname === "/setup") return setupPage(request, env, cfg);
+    if (url.pathname === "/ai-test") return aiTestPage(request, env, cfg);
     return new Response("Not Found", { status: 404 });
   },
 };
